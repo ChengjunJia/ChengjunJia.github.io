@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 3.9.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"blog.chengjunjia.site","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="TODO: NSM项目尚未能够完全成功运行! 需要通过Snort、ModSecurity等Docker做完善工作。 本文旨在介绍CNCF基金会下的Network Service Mesh的相关情况和使用方法总结。 Docker、Kubernetes、CNCFDocker，作为轻量级虚拟化–容器的一种解决方案，在开源社区从诞生之初就备受瞩目。Docker能轻到近似二进制文件大小(可以参考裁减镜像)，">
+<meta name="keywords" content="Research,SecEdge">
+<meta property="og:type" content="article">
+<meta property="og:title" content="NSM 介绍">
+<meta property="og:url" content="http://blog.chengjunjia.site/2020/04/09/012-NSM_Install/index.html">
+<meta property="og:site_name" content="Blogs">
+<meta property="og:description" content="TODO: NSM项目尚未能够完全成功运行! 需要通过Snort、ModSecurity等Docker做完善工作。 本文旨在介绍CNCF基金会下的Network Service Mesh的相关情况和使用方法总结。 Docker、Kubernetes、CNCFDocker，作为轻量级虚拟化–容器的一种解决方案，在开源社区从诞生之初就备受瞩目。Docker能轻到近似二进制文件大小(可以参考裁减镜像)，">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2022-07-08T06:36:27.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="NSM 介绍">
+<meta name="twitter:description" content="TODO: NSM项目尚未能够完全成功运行! 需要通过Snort、ModSecurity等Docker做完善工作。 本文旨在介绍CNCF基金会下的Network Service Mesh的相关情况和使用方法总结。 Docker、Kubernetes、CNCFDocker，作为轻量级虚拟化–容器的一种解决方案，在开源社区从诞生之初就备受瞩目。Docker能轻到近似二进制文件大小(可以参考裁减镜像)，">
+
+<link rel="canonical" href="http://blog.chengjunjia.site/2020/04/09/012-NSM_Install/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'en'
+  };
+</script>
+
+  <title>NSM 介绍 | Blogs</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Blogs</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">To become outstanding</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="user fa-fw"></i>About</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="tags fa-fw"></i>Tags</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="archive fa-fw"></i>Archives</a>
+
+  </li>
+        <li class="menu-item menu-item-schedule">
+
+    <a href="/schedule/" rel="section"><i class="calendar fa-fw"></i>Schedule</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container"></div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="algolia-results">
+  <div id="algolia-stats"></div>
+  <div id="algolia-hits"></div>
+  <div id="algolia-pagination" class="algolia-pagination"></div>
+</div>
+
+      
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://blog.chengjunjia.site/2020/04/09/012-NSM_Install/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/PersonalLogo.jpg">
+      <meta itemprop="name" content="ChengjunJia">
+      <meta itemprop="description" content="Some tiny things and knowledge about Computer Network Research">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Blogs">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          NSM 介绍
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2020-04-09 12:44:35" itemprop="dateCreated datePublished" datetime="2020-04-09T12:44:35+00:00">2020-04-09</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2022-07-08 06:36:27" itemprop="dateModified" datetime="2022-07-08T06:36:27+00:00">2022-07-08</time>
+              </span>
+
+          
+            <span class="post-meta-item" title="Views" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">Views: </span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span><br>
+            <span class="post-meta-item" title="Symbols count in article">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">Symbols count in article: </span>
+              <span>1.9k</span>
+            </span>
+            <span class="post-meta-item" title="Reading time">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">Reading time &asymp;</span>
+              <span>2 mins.</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>TODO: NSM项目尚未能够完全成功运行! 需要通过Snort、ModSecurity等Docker做完善工作。</p>
+<p>本文旨在介绍CNCF基金会下的Network Service Mesh的相关情况和使用方法总结。</p>
+<h4 id="Docker、Kubernetes、CNCF"><a href="#Docker、Kubernetes、CNCF" class="headerlink" title="Docker、Kubernetes、CNCF"></a>Docker、Kubernetes、CNCF</h4><p>Docker，作为轻量级虚拟化–容器的一种解决方案，在开源社区从诞生之初就备受瞩目。Docker能轻到近似二进制文件大小(可以参考<a href="https://www.infoq.cn/article/3-simple-tricks-for-smaller-docker-images" target="_blank" rel="noopener">裁减镜像</a>)，占用极少的资源、同时保证isolation。但是在业务中部署容器却不是一件简单的事情，需要配置物理机和容器之间的交互，同时需要配置好各种监控以保证适时扩容。为了应对容器的这种问题，Kubernetes作为容器的编排工具出现了。Kubernetes是Google将其内部集群管理系统Borg(13年发布Omega)修改后于14年开源。2015年，谷歌和Linux基金会合作建立云原生计算基金会(CNCF)，旨在建立可持续的生态系统。Google此举可认为是通过开源打击其他云厂商，既然我商业化进展不顺、通过开源项目来引发混战也是不错的。Kubernetes在Security方面天然有Certificate和PKI、在Scheduling和Scalability天然考虑分布式(谷歌的分布式系统实力还是非常强大的)，加上虚拟化的一次开发到处部署，Restful API的现代化前端交互，Kubernetes集合了system设计的各种历史经验，对于云应用来说具有强大的吸引力。</p>
+<p>随后，Kubernetes有了软件包管理系统Helm(类似Brew、apt或yum)、Minikube(本地可运行Kubernetes)、Prometheus(metric收集数据库)、OpenTracing(Debug工具)等等从2016年开始逐渐完善起来；到了2017年，Istio(微服务网络)发布，Kubernetes也在亚马逊、微软等开始推出商用，转眼到了2020年，Kubernetes可以说已经是System方向必须掌握的工具了。</p>
+<p>目前围绕Kubernetes已有一系列的开源项目，相关信息都可以在CNCF的官网上找到。阿里、华为都有贡献开源项目。</p>
+<h4 id="NSM介绍"><a href="#NSM介绍" class="headerlink" title="NSM介绍"></a>NSM介绍</h4><p>k8s在网络方面有一个缺陷，就是不能配置L2/L3层的处理；对于应用来说，看到TCP层已经足够了(分布式系统直接就基于RPC设计系统)，不需要L2/L3层的东西；k8s的访问安全性是通过Authentication实现的，因此不需要在意流量如何如何。但是如果想把k8s放到公网上，就不得不考虑更多的L2/L3层的网络功能，比如Middlebox(Firewall-&gt;DPI-&gt;VPN形成的基于安全的考虑设立的SFC)，比如电信网的计费网关、QoS功能模块等。<strong>但是从纯Zero-Trust的角度，MB似乎是要尽量舍弃的？</strong></p>
+<p>Network Service Mesh项目的设立之初就是为了应对这个问题，详细的说明介绍可以参考<a href="https://www.servicemesher.com/blog/202002-network-service-mesh/" target="_blank" rel="noopener">这个链接</a>。有些重点内容挑出来如下</p>
+<blockquote>
+<p>NSM并没有对Kubernetes的CNI模型进行扩展或者修改，而是采用了一套与CNI完全独立的新机制来以实现这些高级的网络需求。<br>NSM参考了Kubernetes中Service的概念提出了Network Service。Network Service对外提供的是L2/L3层的网络服务，即对数据包进行处理和转发，而不会终结数据包。<br>我们可以将NSM和SDN结合使用，可以通过NSM中的Network Service接入SDN提供的强大的网络服务。下图是在NSM中利用SDN为应用提供QoE（Quality of Experience）服务的一个例子。</p>
+</blockquote>
+<h4 id="NSM使用"><a href="#NSM使用" class="headerlink" title="NSM使用"></a>NSM使用</h4><h5 id="NSM的直接安装"><a href="#NSM的直接安装" class="headerlink" title="NSM的直接安装"></a>NSM的直接安装</h5><ol>
+<li>安装k8s以及k8s的包管理器helm</li>
+<li>通过helm增加repo和安装</li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">helm repo add nsm https://helm.nsm.dev/</span><br><span class="line">helm install nsm/nsm</span><br></pre></td></tr></table></figure>
+
+<h5 id="NSM的模拟使用"><a href="#NSM的模拟使用" class="headerlink" title="NSM的模拟使用"></a>NSM的模拟使用</h5><ol>
+<li>下载NSM代码和NSM example(在github中)到同一目录下</li>
+<li>安装example给出的<a href="https://github.com/networkservicemesh/examples" target="_blank" rel="noopener">说明</a>, 进行makefile的处理[^footnote-kind]。</li>
+<li>安装</li>
+</ol>
+<p>NSM在Github下载后</p>
+<h4 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h4><ol>
+<li><a href="https://www.infoq.cn/article/3-simple-tricks-for-smaller-docker-images" target="_blank" rel="noopener">裁减Docker镜像大小</a></li>
+<li><a href="https://www.servicemesher.com/blog/202002-network-service-mesh/" target="_blank" rel="noopener">NFV走向云原生时代：Network Service Mesh项目介绍</a></li>
+<li><a href="https://cloud.tencent.com/developer/article/1548138" target="_blank" rel="noopener">CNCF网络研讨会：NSM网络服务网格 - 介绍（视频+PDF）</a></li>
+<li><a href="https://cizixs.com/2017/12/30/cncf-cloud-native-landscape/" target="_blank" rel="noopener">CNCF 云原生容器生态系统概要</a></li>
+</ol>
+<p>[^footnote-kind]: 主要是安装k8s本地模拟器: kind； 关于kind的简单说明可以查看<a href="https://zhuanlan.zhihu.com/p/61492135" target="_blank" rel="noopener">ref</a>。</p>
+
+    </div>
+
+    
+    
+    
+        <div class="reward-container">
+  <div>If my article helps you, I will be very happy.</div>
+  <button onclick="var qr = document.getElementById('qr'); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    Donate
+  </button>
+  <div id="qr" style="display: none;">
+      
+      <div style="display: inline-block;">
+        <img src="/images/alipay.jpeg" alt="ChengjunJia Alipay">
+        <p>Alipay</p>
+      </div>
+
+  </div>
+</div>
+
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Research/" rel="tag"># Research</a>
+              <a href="/tags/SecEdge/" rel="tag"># SecEdge</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/03/31/010-ResearchMethods/" rel="prev" title="科研方法论, 以网包分类为例">
+      <i class="fa fa-chevron-left"></i> 科研方法论, 以网包分类为例
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2020/04/10/013-SelfTraining/" rel="next" title="科研训练">
+      科研训练 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+    <div class="comments" id="gitalk-container"></div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+            
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#Docker、Kubernetes、CNCF"><span class="nav-number">1.</span> <span class="nav-text">Docker、Kubernetes、CNCF</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#NSM介绍"><span class="nav-number">2.</span> <span class="nav-text">NSM介绍</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#NSM使用"><span class="nav-number">3.</span> <span class="nav-text">NSM使用</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#NSM的直接安装"><span class="nav-number">3.1.</span> <span class="nav-text">NSM的直接安装</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#NSM的模拟使用"><span class="nav-number">3.2.</span> <span class="nav-text">NSM的模拟使用</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Reference"><span class="nav-number">4.</span> <span class="nav-text">Reference</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="ChengjunJia"
+      src="/images/PersonalLogo.jpg">
+  <p class="site-author-name" itemprop="name">ChengjunJia</p>
+  <div class="site-description" itemprop="description">Some tiny things and knowledge about Computer Network Research</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">19</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/ChengjunJia" title="GitHub → https://github.com/ChengjunJia" rel="noopener" target="_blank"><i class="github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:chengjunjiathu@outlook.com" title="E-Mail → mailto:chengjunjiathu@outlook.com" rel="noopener" target="_blank"><i class="envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">ChengjunJia</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+      <span class="post-meta-item-text">Symbols count total: </span>
+    <span title="Symbols count total">26k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span class="post-meta-item-text">Reading time total &asymp;</span>
+    <span title="Reading time total">24 mins.</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a>
+  </div>
+
+<div id="days"></div>
+<script>
+function show_date_time(){
+    window.setTimeout("show_date_time()", 1000);
+    BirthDay=new Date("09/04/2019 16:36:14");//修改为自己的blog建站时间
+    today=new Date();
+    timeold=(today.getTime()-BirthDay.getTime());
+    sectimeold=timeold/1000
+    secondsold=Math.floor(sectimeold);
+    msPerDay=24*60*60*1000
+    e_daysold=timeold/msPerDay
+    daysold=Math.floor(e_daysold);
+    e_hrsold=(e_daysold-daysold)*24;
+    hrsold=setzero(Math.floor(e_hrsold));
+    e_minsold=(e_hrsold-hrsold)*60;
+    minsold=setzero(Math.floor((e_hrsold-hrsold)*60));
+    seconds=setzero(Math.floor((e_minsold-minsold)*60));
+    document.getElementById('days').innerHTML="本站已安全运行"+daysold+"天"+hrsold+"小时"+minsold+"分"+seconds+"秒";
+}
+function setzero(i){
+    if (i<10)
+    {i="0" + i};
+    return i;
+}
+show_date_time();
+</script>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="Total Visitors">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="Total Views">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script>
+<script src="/js/schemes/pisces.js"></script>
+<script src="/js/next-boot.js"></script>
+
+
+
+  
+
+
+
+
+  
+<script src="//cdn.jsdelivr.net/npm/algoliasearch@4/dist/algoliasearch-lite.umd.js"></script>
+<script src="//cdn.jsdelivr.net/npm/instantsearch.js@4/dist/instantsearch.production.min.js"></script><script src="/js/algolia-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
+
+<script>
+NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', () => {
+    var gitalk = new Gitalk({
+      clientID    : '754cac1df904f19c28da',
+      clientSecret: 'aa1ba39270931efd6ffbc8ac1228a7da1e92fced',
+      repo        : 'gitalk-comments',
+      owner       : 'ChengjunJia',
+      admin       : ['ChengjunJia'],
+      id          : '38a2c6468e8852eec842094deaf0b4f7',
+        language: 'en',
+      distractionFreeMode: true
+    });
+    gitalk.render('gitalk-container');
+  }, window.Gitalk);
+});
+</script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
+</body>
+</html>

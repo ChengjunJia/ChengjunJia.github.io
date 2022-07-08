@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 3.9.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"blog.chengjunjia.site","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="在整理自己以前杂七杂八的东西时, 发现自己之前写过Research method的一些内容, 杂乱在md文件、OneNote、Pocket和Youdao Note中, 这里做一个简单整理(自己的个人知识管理能力确实有待提高, 需要维护changelog和所有文件归档到一起)。 做科研就是在解决问题，是学习用逻辑和科学方法论去解决问题。当然，逻辑或者说理性是不能解决所有问题，宗教信仰自有其存在的必要">
+<meta name="keywords" content="Research,三观">
+<meta property="og:type" content="article">
+<meta property="og:title" content="科研方法论, 以网包分类为例">
+<meta property="og:url" content="http://blog.chengjunjia.site/2020/03/31/010-ResearchMethods/index.html">
+<meta property="og:site_name" content="Blogs">
+<meta property="og:description" content="在整理自己以前杂七杂八的东西时, 发现自己之前写过Research method的一些内容, 杂乱在md文件、OneNote、Pocket和Youdao Note中, 这里做一个简单整理(自己的个人知识管理能力确实有待提高, 需要维护changelog和所有文件归档到一起)。 做科研就是在解决问题，是学习用逻辑和科学方法论去解决问题。当然，逻辑或者说理性是不能解决所有问题，宗教信仰自有其存在的必要">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2022-07-08T06:36:27.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="科研方法论, 以网包分类为例">
+<meta name="twitter:description" content="在整理自己以前杂七杂八的东西时, 发现自己之前写过Research method的一些内容, 杂乱在md文件、OneNote、Pocket和Youdao Note中, 这里做一个简单整理(自己的个人知识管理能力确实有待提高, 需要维护changelog和所有文件归档到一起)。 做科研就是在解决问题，是学习用逻辑和科学方法论去解决问题。当然，逻辑或者说理性是不能解决所有问题，宗教信仰自有其存在的必要">
+
+<link rel="canonical" href="http://blog.chengjunjia.site/2020/03/31/010-ResearchMethods/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'en'
+  };
+</script>
+
+  <title>科研方法论, 以网包分类为例 | Blogs</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Blogs</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">To become outstanding</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="user fa-fw"></i>About</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="tags fa-fw"></i>Tags</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="archive fa-fw"></i>Archives</a>
+
+  </li>
+        <li class="menu-item menu-item-schedule">
+
+    <a href="/schedule/" rel="section"><i class="calendar fa-fw"></i>Schedule</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container"></div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="algolia-results">
+  <div id="algolia-stats"></div>
+  <div id="algolia-hits"></div>
+  <div id="algolia-pagination" class="algolia-pagination"></div>
+</div>
+
+      
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://blog.chengjunjia.site/2020/03/31/010-ResearchMethods/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/PersonalLogo.jpg">
+      <meta itemprop="name" content="ChengjunJia">
+      <meta itemprop="description" content="Some tiny things and knowledge about Computer Network Research">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Blogs">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          科研方法论, 以网包分类为例
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2020-03-31 12:44:35" itemprop="dateCreated datePublished" datetime="2020-03-31T12:44:35+00:00">2020-03-31</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2022-07-08 06:36:27" itemprop="dateModified" datetime="2022-07-08T06:36:27+00:00">2022-07-08</time>
+              </span>
+
+          
+            <span class="post-meta-item" title="Views" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">Views: </span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span><br>
+            <span class="post-meta-item" title="Symbols count in article">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">Symbols count in article: </span>
+              <span>3.7k</span>
+            </span>
+            <span class="post-meta-item" title="Reading time">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">Reading time &asymp;</span>
+              <span>3 mins.</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>在整理自己以前杂七杂八的东西时, 发现自己之前写过Research method的一些内容, 杂乱在md文件、OneNote、Pocket和Youdao Note中, 这里做一个简单整理(自己的个人知识管理能力确实有待提高, 需要维护changelog和所有文件归档到一起)。</p>
+<p>做科研就是在解决问题，是学习用逻辑和科学方法论去解决问题。当然，逻辑或者说理性是不能解决所有问题，宗教信仰自有其存在的必要(这一点也是《战争论》中提到的: 交战绝不仅是双方力量的对比、意志在其中会发挥作用)。但这一套方法不得不说能够解决绝大多数的问题，是优秀世界观的一个重要组成部分。所谓的科学的方法，抽象来说就是大家说的唯物辩证法，我觉得更加实用的是”7W”准则: What, When, Who, Why, Where, How, For Whom。当我们用着7W准则去思考一个问题时, 就会出现如下结果。</p>
+<h3 id="对问题的思考"><a href="#对问题的思考" class="headerlink" title="对问题的思考"></a>对问题的思考</h3><ol>
+<li>What: <strong>从辩证角度来看，问题是什么。具体来说, 问题的内涵和外延分别是什么</strong>。如, 网包分类问题。一般性的定义/内涵可以描述为, “给定一组规则和一个报文, 对该报文找到适配的最高优先级的规则”, 这里的一些关键形容词发生变化后就会对应不同的问题。如: “一个规则”启发我们设计BCAM硬件类型， “一组报文”启发我们去设计新的batch算法， “所有匹配规则”启发我们做遍历算法或对规则进行交集操作， “某一个匹配规则”启发我们对规则做并集操作。修改定义得到不同的问题，其实也能启发我们更加深入地思考问题。比如: 基于“所有匹配规则”设计出的算法肯定存在优化空间的，因为我们只需要最高优先级的匹配规则，所以Bit Vector类型的算法可以优化；比如: 基于“某一个匹配规则”设计出的算法其实可以作为“最高优先级的规则”问题的一个“预过滤”。当然，这些启发式信息最后能不能得到好的结果，就要因地制宜和进行相应的实验验证了。问题的外延就需要我们举例来理解问题，典型的“5元组”规则(src/dst*ip/port+protocol)的定义是什么样子的，是prefix和range，那它们是不是存在什么特殊性质？我们是不是可以用一些特殊方法？现在的规则还存在OpenFlow类型的11元组的规则，甚至是自定义包头的规则。挖掘问题的外延，我们就会把问题做的不断精细化。</li>
+<li>When: <strong>从时间维度来看，问题处在什么位置</strong>。我特别喜欢Gartner的Hyper技术曲线，也就是技术发展存在“起步”-“泡沫”-“幻灭”-“理性发展”，也就是事情存在高估期、低估期然后进入理性期(插一句，本朝对于太祖的看法也是如此，哈哈)。这一点在Research中尤其重要，因为你要创新就要尽量去做<strong>很少人考虑过/做成</strong>的事情。当一个所谓的“<strong>新领域</strong>”出现的时候，我们就能发现很多“很少人考虑过”的事情，比如：把ML泛滥到其他领域(笑)。至于“很少人做成”的事情，就要考虑两种情况：一是大概率做不成，比如“永动机”、NP问题等；一是比较困难，比如“更新与分类都性能良好的网包分类算法”。想要知道问题处在什么时间维度，就要知道该事物的过去、同时找到历史上的参照物以预测未来。以网包分类算法为例，做一下survey就知道，该问题在2000年左右的时候比较Hot，提出了各种各样的solution；在2005年已经出现了非常好的综述。当然，一项技术总是可以持续发展的（比如，发动机持续研究了好几个世纪），网包分类问题也可以持续研究下去，但该问题已经不属于“新领域”，不是那种很好挖的矿了（当问题的内涵、外延都比较清晰的时候，该问题也就常常到了平稳发展的时候了）。</li>
+<li>Where: <strong>从空间维度来看，问题处在什么位置</strong>。我们需要知道问题是在哪个位置、哪个领域，周围可利用的资源是什么。网包分类问题虽然可以泛化来思考，但一般就是用在网络中间设备上: 路由器、防火墙等；所以我们需要去了解路由器的架构、性能指标(特别是网络带宽的迅速增长)、供应链(整个产品从最上游到最下游是哪些公司一起造出来的)。很自然地我们就发现存在NPU(多核网络处理器)、TCAM、ASIC、MIPS指令集这种专业化硬件，自然就想基于这些硬件设计算法；扩展来想，我们就会思考FPGA、GPU能不能用上（能够发文章，但工业应用大概率不是很有用）。继续延伸发现Open vSwitch上面需要网包分类，自然就考虑到CPU平台（网络功能虚拟化领域等）上算法优化是很重要的。</li>
+<li>Why: <strong>从逻辑角度来看，问题处在什么位置；也就是为什么有这个问题</strong>。这一部分的问题就可能需要我们深入到数理基础部分了，比如：网包分类问题，从数理层面上和计算几何(1978年Shamos的博士论文而兴起的科学)中的点定位、数据库的查询等都有关系，然后需要返回到拓扑理论、算法设计上。更典型的问题，比如：网包调度问题，本质上和流量调度、工业工程里的调度都有相似之处，需要返回到诸如，网络微积分的数学基础上。当然，浅显地来看，trade-off在计算机领域到处存在，在网包分类问题中，内存空间占用和网包分类所需要的时间存在Trade-off、快速规则更新和快速网包分类之间也存在Trade-off。</li>
+<li>How: <strong>调研清楚问题已有的各种解决方案</strong>。这方面需要大量的专业知识和广泛的了解，读survey、读专业性期刊、参加讲座、读教材、工业实践，当然最最靠谱的方法是找到<strong>可靠的专业人士</strong>做咨询或委托。直接搜索Packet Classification，然后就能看到很多papers，根据citation数量就能分辨出那些文章好。根据经典的survey来说，网包分类问题的常见解决思路有四种：线性查找、决策树、哈希(TSS)和比特串(BitVector)，其实从本质上来讲，后三种(树、哈希、比特串)基本就是高性能中常用的数据结构了(因为涉及到非线性，队列类型的数据结构并不适合)。</li>
+<li>Who: <strong>向谁去了解</strong>。这里推荐使用“微软学术”和“Aminer”、能够借助知识图谱自动帮助分析，免去手动查找的苦恼；初入领域的人也可以使用<strong>HistCite工具</strong>来分析。比如，我就发现了Washington University的PhD, David E. Taylor, 他博士期间研究高性能Router和Switch(刚好是那个时期的Hot研究)；当然还有我导(毕竟我导带着实验室在PC领域呆了10年)。不过有趣的是Taylor博士毕业后短暂在学术界呆了9个月(做Visiting Assistant Professor)，就投身了工业界了(笑)，在Exegy公司做到现在(15年多，现任CTO，可以在Linked上看到他的简历)。Exegy这家公司也挺有趣，用FPGA加速为金融领域的人提供real-time data；果然是金融和信息不分家。</li>
+<li>For Whom: <strong>为了什么</strong>。这一点并不在传统的6W框架内，但做research很容易犯的一个错误是：漫无目的。纯粹从学术追求出发、为了满足自己的好奇心，四处查看无可厚非、只要记得多总结积累就好。但是如果是“为了他人”做项目或者“为了自己”发文章，都要适当功利一点，去思考、去聚焦在要做什么上面。</li>
+</ol>
+<h3 id="对领域的思考"><a href="#对领域的思考" class="headerlink" title="对领域的思考"></a>对领域的思考</h3><ol>
+<li>What: 什么是热点？什么是学术领域内的关键问题？什么是工业领域的关键问题？未来2年、5年乃至10年什么东西会发展起来？(当然，未来10年谁也看不清，但这不妨碍去思考这个问题)</li>
+<li>When: 领域的发展历史是什么。比如: 计算机网络在从underlay走向overlay，云原生场景是网络的重要场景；而underlay的物理网络的管理从单机配置往SDN、IBN发展(华为、思科公司)，应用从有线往无线延伸，从Internet向着IoT前进。</li>
+<li>Who: 领域的大牛是谁。怼着中美的科学院、工程院的院士名单和研究领域的介绍去匹配就行。计算机网络领域就怼着Sigcomm Award的获得者去看就行: George Varghese(这位大佬是真的NB, 他在Sigcom’14获奖时的Slides对于做Research非常有价值), Nick McKeown, Sally Floyd, Scott Shenker, Van Jacobson, Raj Jain(大佬的主页对于Network新人非常友好)。哈，从这个角度来看，多路径传输(Multi-path TCP)很有前途啊，毕竟提出者Mark Handley 刚拿了奖(笑)。</li>
+<li>Why: 领域内的principals有什么？一些经典设计的原理是什么？</li>
+<li>Where: 略。</li>
+<li>How: 学习一些常用的技能。如: CS领域内的编程、一些工具、写作、英语等。</li>
+</ol>
+<h3 id="补充"><a href="#补充" class="headerlink" title="补充"></a>补充</h3><p>还有一个特别好用的是六顶思考帽。</p>
+<ol>
+<li>陈述问题事实（白帽）</li>
+<li>提出如何解决问题的建议, 头脑风暴（绿帽）</li>
+<li>评估建议的优缺点：列举优点（黄帽）；列举缺点（黑帽）</li>
+<li>对各项选择方案进行直觉判断（红帽）</li>
+<li>总结陈述，得出方案（蓝帽）</li>
+</ol>
+<h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><ol>
+<li><a href="https://wiki.mbalib.com/zh-tw/6W1H%E5%8E%9F%E5%88%99" target="_blank" rel="noopener">6W1H原则</a></li>
+<li>六顶思考帽(中科大·文献管理与信息分析·罗昭锋)</li>
+</ol>
+
+    </div>
+
+    
+    
+    
+        <div class="reward-container">
+  <div>If my article helps you, I will be very happy.</div>
+  <button onclick="var qr = document.getElementById('qr'); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    Donate
+  </button>
+  <div id="qr" style="display: none;">
+      
+      <div style="display: inline-block;">
+        <img src="/images/alipay.jpeg" alt="ChengjunJia Alipay">
+        <p>Alipay</p>
+      </div>
+
+  </div>
+</div>
+
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Research/" rel="tag"># Research</a>
+              <a href="/tags/三观/" rel="tag"># 三观</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/02/24/011-PacketScheduler/" rel="prev" title="网包调度">
+      <i class="fa fa-chevron-left"></i> 网包调度
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2020/04/09/012-NSM_Install/" rel="next" title="NSM 介绍">
+      NSM 介绍 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+    <div class="comments" id="gitalk-container"></div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+            
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#对问题的思考"><span class="nav-number">1.</span> <span class="nav-text">对问题的思考</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#对领域的思考"><span class="nav-number">2.</span> <span class="nav-text">对领域的思考</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#补充"><span class="nav-number">3.</span> <span class="nav-text">补充</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#参考"><span class="nav-number">4.</span> <span class="nav-text">参考</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="ChengjunJia"
+      src="/images/PersonalLogo.jpg">
+  <p class="site-author-name" itemprop="name">ChengjunJia</p>
+  <div class="site-description" itemprop="description">Some tiny things and knowledge about Computer Network Research</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">19</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/ChengjunJia" title="GitHub → https://github.com/ChengjunJia" rel="noopener" target="_blank"><i class="github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:chengjunjiathu@outlook.com" title="E-Mail → mailto:chengjunjiathu@outlook.com" rel="noopener" target="_blank"><i class="envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">ChengjunJia</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+      <span class="post-meta-item-text">Symbols count total: </span>
+    <span title="Symbols count total">26k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span class="post-meta-item-text">Reading time total &asymp;</span>
+    <span title="Reading time total">24 mins.</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a>
+  </div>
+
+<div id="days"></div>
+<script>
+function show_date_time(){
+    window.setTimeout("show_date_time()", 1000);
+    BirthDay=new Date("09/04/2019 16:36:14");//修改为自己的blog建站时间
+    today=new Date();
+    timeold=(today.getTime()-BirthDay.getTime());
+    sectimeold=timeold/1000
+    secondsold=Math.floor(sectimeold);
+    msPerDay=24*60*60*1000
+    e_daysold=timeold/msPerDay
+    daysold=Math.floor(e_daysold);
+    e_hrsold=(e_daysold-daysold)*24;
+    hrsold=setzero(Math.floor(e_hrsold));
+    e_minsold=(e_hrsold-hrsold)*60;
+    minsold=setzero(Math.floor((e_hrsold-hrsold)*60));
+    seconds=setzero(Math.floor((e_minsold-minsold)*60));
+    document.getElementById('days').innerHTML="本站已安全运行"+daysold+"天"+hrsold+"小时"+minsold+"分"+seconds+"秒";
+}
+function setzero(i){
+    if (i<10)
+    {i="0" + i};
+    return i;
+}
+show_date_time();
+</script>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="Total Visitors">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="Total Views">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script>
+<script src="/js/schemes/pisces.js"></script>
+<script src="/js/next-boot.js"></script>
+
+
+
+  
+
+
+
+
+  
+<script src="//cdn.jsdelivr.net/npm/algoliasearch@4/dist/algoliasearch-lite.umd.js"></script>
+<script src="//cdn.jsdelivr.net/npm/instantsearch.js@4/dist/instantsearch.production.min.js"></script><script src="/js/algolia-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
+
+<script>
+NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', () => {
+    var gitalk = new Gitalk({
+      clientID    : '754cac1df904f19c28da',
+      clientSecret: 'aa1ba39270931efd6ffbc8ac1228a7da1e92fced',
+      repo        : 'gitalk-comments',
+      owner       : 'ChengjunJia',
+      admin       : ['ChengjunJia'],
+      id          : 'f24b49a66d90d028c4c30f751ab5a7c8',
+        language: 'en',
+      distractionFreeMode: true
+    });
+    gitalk.render('gitalk-container');
+  }, window.Gitalk);
+});
+</script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
+</body>
+</html>

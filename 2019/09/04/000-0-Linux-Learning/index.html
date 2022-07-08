@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 3.9.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"blog.chengjunjia.site","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="常见命令   Command Usage Other Info    uname 查看内核信息    fdisk 查看磁盘信息    blkid 更改磁盘信息    ln 建立软链接    dpkg deb包安装使用等 -i [.deb]安装; -r 删除   unzip zip解压 unzip [-x xlist] [-d exdir]   env 查看环境变量    alias 重命名命令 a">
+<meta name="keywords" content="IT">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Linux Learning(个人参考使用)">
+<meta property="og:url" content="http://blog.chengjunjia.site/2019/09/04/000-0-Linux-Learning/index.html">
+<meta property="og:site_name" content="Blogs">
+<meta property="og:description" content="常见命令   Command Usage Other Info    uname 查看内核信息    fdisk 查看磁盘信息    blkid 更改磁盘信息    ln 建立软链接    dpkg deb包安装使用等 -i [.deb]安装; -r 删除   unzip zip解压 unzip [-x xlist] [-d exdir]   env 查看环境变量    alias 重命名命令 a">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2022-07-08T06:36:27.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Linux Learning(个人参考使用)">
+<meta name="twitter:description" content="常见命令   Command Usage Other Info    uname 查看内核信息    fdisk 查看磁盘信息    blkid 更改磁盘信息    ln 建立软链接    dpkg deb包安装使用等 -i [.deb]安装; -r 删除   unzip zip解压 unzip [-x xlist] [-d exdir]   env 查看环境变量    alias 重命名命令 a">
+
+<link rel="canonical" href="http://blog.chengjunjia.site/2019/09/04/000-0-Linux-Learning/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'en'
+  };
+</script>
+
+  <title>Linux Learning(个人参考使用) | Blogs</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Blogs</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">To become outstanding</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="user fa-fw"></i>About</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="tags fa-fw"></i>Tags</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="archive fa-fw"></i>Archives</a>
+
+  </li>
+        <li class="menu-item menu-item-schedule">
+
+    <a href="/schedule/" rel="section"><i class="calendar fa-fw"></i>Schedule</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container"></div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="algolia-results">
+  <div id="algolia-stats"></div>
+  <div id="algolia-hits"></div>
+  <div id="algolia-pagination" class="algolia-pagination"></div>
+</div>
+
+      
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://blog.chengjunjia.site/2019/09/04/000-0-Linux-Learning/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/PersonalLogo.jpg">
+      <meta itemprop="name" content="ChengjunJia">
+      <meta itemprop="description" content="Some tiny things and knowledge about Computer Network Research">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Blogs">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Linux Learning(个人参考使用)
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2019-09-04 00:00:00" itemprop="dateCreated datePublished" datetime="2019-09-04T00:00:00+00:00">2019-09-04</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2022-07-08 06:36:27" itemprop="dateModified" datetime="2022-07-08T06:36:27+00:00">2022-07-08</time>
+              </span>
+
+          
+            <span class="post-meta-item" title="Views" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">Views: </span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span><br>
+            <span class="post-meta-item" title="Symbols count in article">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">Symbols count in article: </span>
+              <span>1.9k</span>
+            </span>
+            <span class="post-meta-item" title="Reading time">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">Reading time &asymp;</span>
+              <span>2 mins.</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h2 id="常见命令"><a href="#常见命令" class="headerlink" title="常见命令"></a>常见命令</h2><table>
+<thead>
+<tr>
+<th align="left">Command</th>
+<th align="left">Usage</th>
+<th align="left">Other Info</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">uname</td>
+<td align="left">查看内核信息</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">fdisk</td>
+<td align="left">查看磁盘信息</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">blkid</td>
+<td align="left">更改磁盘信息</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">ln</td>
+<td align="left">建立软链接</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">dpkg</td>
+<td align="left">deb包安装使用等</td>
+<td align="left">-i [.deb]安装; -r 删除</td>
+</tr>
+<tr>
+<td align="left">unzip</td>
+<td align="left">zip解压</td>
+<td align="left">unzip [-x xlist] [-d exdir]</td>
+</tr>
+<tr>
+<td align="left">env</td>
+<td align="left">查看环境变量</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">alias</td>
+<td align="left">重命名命令</td>
+<td align="left">alias ls=”ls -al”</td>
+</tr>
+<tr>
+<td align="left">service</td>
+<td align="left">服务启动</td>
+<td align="left">/etc/init.d/ 或 /etc/init/下的脚本的执行</td>
+</tr>
+<tr>
+<td align="left">scp</td>
+<td align="left">ssh传输文件</td>
+<td align="left">scp [-r] [-P port] 本地 user@ip:/home/.</td>
+</tr>
+<tr>
+<td align="left">ssh</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">ssh-keygen</td>
+<td align="left">产生ssh指纹</td>
+<td align="left">和ssh-copy-id user@host使用来免密登</td>
+</tr>
+</tbody></table>
+<h2 id="文件位置说明"><a href="#文件位置说明" class="headerlink" title="文件位置说明"></a>文件位置说明</h2><table>
+<thead>
+<tr>
+<th align="left">Location</th>
+<th align="left">Usage</th>
+<th align="left">Other Info</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">/etc/fstab</td>
+<td align="left">磁盘开机挂载</td>
+<td align="left">UUID使用<strong>fdisk -l</strong>查看</td>
+</tr>
+<tr>
+<td align="left">/proc/version</td>
+<td align="left">当前系统的内核版本号及系统名称,<strong>uname</strong>命令就是这样执行的</td>
+<td align="left">/proc是系统内核映像,文件位于内存,可访问内核数据</td>
+</tr>
+<tr>
+<td align="left">/etc/rc.local</td>
+<td align="left">开机启动</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">~/.bashrc</td>
+<td align="left">bash加载前执行(interactive non-login shell)</td>
+<td align="left">注意<strong>alias, export</strong>等命令定义</td>
+</tr>
+<tr>
+<td align="left">~/.bash_profile</td>
+<td align="left">login shell执行</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">/usr/share/applications</td>
+<td align="left">增加dash快速启动内容</td>
+<td align="left">.desktop的定义参考目录下的其他文件</td>
+</tr>
+</tbody></table>
+<h2 id="Grub引导"><a href="#Grub引导" class="headerlink" title="Grub引导"></a>Grub引导</h2><p>Grub是一个linux引导程序</p>
+<h3 id="待办：grub的实际运行原理调研"><a href="#待办：grub的实际运行原理调研" class="headerlink" title="待办：grub的实际运行原理调研"></a>待办：grub的实际运行原理调研</h3><h3 id="EFI-GPT问题"><a href="#EFI-GPT问题" class="headerlink" title="EFI,GPT问题"></a>EFI,GPT问题</h3><p>问题解决参照 <a href="http://www.mintos.org/skill/rescue-efi-grub.html" target="_blank" rel="noopener">www.mintos.org/skill/rescue-efi-grub.html</a></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">mount /dev/sda4 /mnt（注意先确认自己的 / 分区是 sdaX）  </span><br><span class="line">mount /dev/sda1 /mnt/boot/efi  </span><br><span class="line">mount -t proc proc /mnt/proc  </span><br><span class="line">mount -t sysfs sys /mnt/sys  </span><br><span class="line">mount -o bind /dev /mnt/dev  </span><br><span class="line">mount -t devpts pts /mnt/dev/pts/  </span><br><span class="line">chroot /mnt  </span><br><span class="line">grub-install /dev/sda1  </span><br><span class="line">update-grub2</span><br></pre></td></tr></table></figure>
+
+<p>或者，先添加ubuntu启动项到efi中，再修复  </p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mount /dev/sdb4 /mnt/system  </span><br><span class="line">mount /dev/sdb1 /mnt/system/boot/efi  </span><br><span class="line">efibootmgr -c -d /dev/sdb -p 2 -w -L ubuntu</span><br></pre></td></tr></table></figure>
+
+<p>重启进入ubuntu后，<code>grub-install /dev/sda1； update-grub2</code></p>
+<h2 id="Vim使用"><a href="#Vim使用" class="headerlink" title="Vim使用"></a>Vim使用</h2><h3 id="Command"><a href="#Command" class="headerlink" title="Command"></a>Command</h3><table>
+<thead>
+<tr>
+<th align="left">Normal状态下</th>
+<th align="left">Usage</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">0/$</td>
+<td align="left">移动到行首/行尾</td>
+</tr>
+<tr>
+<td align="left">^/g_</td>
+<td align="left">到行首/行尾非blank字符</td>
+</tr>
+<tr>
+<td align="left">/pattern</td>
+<td align="left">搜索(n/N跳转)</td>
+</tr>
+<tr>
+<td align="left">I/A</td>
+<td align="left">行首/行尾插入</td>
+</tr>
+<tr>
+<td align="left">o/O</td>
+<td align="left">插入一行在行后/前</td>
+</tr>
+<tr>
+<td align="left">a</td>
+<td align="left">光标后插入</td>
+</tr>
+<tr>
+<td align="left">p/P</td>
+<td align="left">粘贴当前位置后/前</td>
+</tr>
+<tr>
+<td align="left">yy</td>
+<td align="left">拷贝当前行，相当于ddP</td>
+</tr>
+<tr>
+<td align="left">u/ C-r</td>
+<td align="left">undo/redo</td>
+</tr>
+<tr>
+<td align="left">[num]G</td>
+<td align="left">移动到第N行</td>
+</tr>
+<tr>
+<td align="left">gg/G</td>
+<td align="left">移动到第一行/最后一行</td>
+</tr>
+<tr>
+<td align="left">w/e</td>
+<td align="left">下一个单词开头/本单词结尾</td>
+</tr>
+<tr>
+<td align="left">W/E</td>
+<td align="left">以blank作为分割的下一个单词</td>
+</tr>
+<tr>
+<td align="left">%</td>
+<td align="left">匹配括号移动</td>
+</tr>
+<tr>
+<td align="left">*/#</td>
+<td align="left">匹配当前单词，移动上一个/下一个</td>
+</tr>
+<tr>
+<td align="left">f/t [c]</td>
+<td align="left">到下一个c字符处或c字符前的一个位置</td>
+</tr>
+<tr>
+<td align="left">F/T [c]</td>
+<td align="left">相反方向</td>
+</tr>
+<tr>
+<td align="left">C-n/C-p</td>
+<td align="left">自动补全功能出现</td>
+</tr>
+<tr>
+<td align="left">r[c]</td>
+<td align="left">用c字符取代当前</td>
+</tr>
+<tr>
+<td align="left">ce</td>
+<td align="left">change until end</td>
+</tr>
+</tbody></table>
+<p>[num]+command:重复某个命令num次</p>
+<p>[start postion]+command+[end postion]:<br>dt”:删除所有字符直到”</p>
+<h3 id="块操作"><a href="#块操作" class="headerlink" title="块操作"></a>块操作</h3><p>块操作，典型的操作： 0 C-v C-d I– [ESC]<br>^ → 到行头<br>C-v → 开始块操作<br>C-d → 向下移动 (你也可以使用hjkl来移动光标，或是使用%，或是别的)<br>I– [ESC] → I是插入，插入“–”，按ESC键来为每一行生效。</p>
+<h3 id="Setting-files"><a href="#Setting-files" class="headerlink" title="Setting files"></a>Setting files</h3><table>
+<thead>
+<tr>
+<th align="left">Command</th>
+<th align="left">Usage</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">:e [filename]</td>
+<td align="left">打开</td>
+</tr>
+<tr>
+<td align="left">:x/:wq/ ZZ</td>
+<td align="left">保存并关闭</td>
+</tr>
+<tr>
+<td align="left">:bn/:bp</td>
+<td align="left">前后一个文件</td>
+</tr>
+<tr>
+<td align="left">:set nu!</td>
+<td align="left">显示行号</td>
+</tr>
+<tr>
+<td align="left">:syntax on</td>
+<td align="left">高亮显示</td>
+</tr>
+<tr>
+<td align="left">:s/old/new/gc</td>
+<td align="left">取代字符,加g表示本行，加c表示确认</td>
+</tr>
+</tbody></table>
+<h3 id="分屏"><a href="#分屏" class="headerlink" title="分屏"></a>分屏</h3><table>
+<thead>
+<tr>
+<th align="left">Command</th>
+<th align="left">Usage</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">:sp [filename]</td>
+<td align="left">上下分割，打开文件,空白则是当前文件</td>
+</tr>
+<tr>
+<td align="left">:vsp [filename]</td>
+<td align="left">左右分割，打开文件</td>
+</tr>
+<tr>
+<td align="left">C-w hjkl</td>
+<td align="left">光标在各个屏之间移动</td>
+</tr>
+<tr>
+<td align="left">C-w c</td>
+<td align="left">关闭屏幕</td>
+</tr>
+</tbody></table>
+<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><ol>
+<li><a href="https://coolshell.cn/articles/5426.html" target="_blank" rel="noopener">https://coolshell.cn/articles/5426.html</a></li>
+</ol>
+
+    </div>
+
+    
+    
+    
+        <div class="reward-container">
+  <div>If my article helps you, I will be very happy.</div>
+  <button onclick="var qr = document.getElementById('qr'); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    Donate
+  </button>
+  <div id="qr" style="display: none;">
+      
+      <div style="display: inline-block;">
+        <img src="/images/alipay.jpeg" alt="ChengjunJia Alipay">
+        <p>Alipay</p>
+      </div>
+
+  </div>
+</div>
+
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/IT/" rel="tag"># IT</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2019/09/04/000-hello-world/" rel="prev" title="Configure the Blog">
+      <i class="fa fa-chevron-left"></i> Configure the Blog
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2019/09/04/000-0-DPDK-Learning/" rel="next" title="DPDK Learning(个人参考使用)">
+      DPDK Learning(个人参考使用) <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+    <div class="comments" id="gitalk-container"></div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+            
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#常见命令"><span class="nav-number">1.</span> <span class="nav-text">常见命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#文件位置说明"><span class="nav-number">2.</span> <span class="nav-text">文件位置说明</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Grub引导"><span class="nav-number">3.</span> <span class="nav-text">Grub引导</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#待办：grub的实际运行原理调研"><span class="nav-number">3.1.</span> <span class="nav-text">待办：grub的实际运行原理调研</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#EFI-GPT问题"><span class="nav-number">3.2.</span> <span class="nav-text">EFI,GPT问题</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Vim使用"><span class="nav-number">4.</span> <span class="nav-text">Vim使用</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Command"><span class="nav-number">4.1.</span> <span class="nav-text">Command</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#块操作"><span class="nav-number">4.2.</span> <span class="nav-text">块操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Setting-files"><span class="nav-number">4.3.</span> <span class="nav-text">Setting files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#分屏"><span class="nav-number">4.4.</span> <span class="nav-text">分屏</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Reference"><span class="nav-number">4.5.</span> <span class="nav-text">Reference</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="ChengjunJia"
+      src="/images/PersonalLogo.jpg">
+  <p class="site-author-name" itemprop="name">ChengjunJia</p>
+  <div class="site-description" itemprop="description">Some tiny things and knowledge about Computer Network Research</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">19</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/ChengjunJia" title="GitHub → https://github.com/ChengjunJia" rel="noopener" target="_blank"><i class="github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:chengjunjiathu@outlook.com" title="E-Mail → mailto:chengjunjiathu@outlook.com" rel="noopener" target="_blank"><i class="envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">ChengjunJia</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+      <span class="post-meta-item-text">Symbols count total: </span>
+    <span title="Symbols count total">26k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span class="post-meta-item-text">Reading time total &asymp;</span>
+    <span title="Reading time total">24 mins.</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a>
+  </div>
+
+<div id="days"></div>
+<script>
+function show_date_time(){
+    window.setTimeout("show_date_time()", 1000);
+    BirthDay=new Date("09/04/2019 16:36:14");//修改为自己的blog建站时间
+    today=new Date();
+    timeold=(today.getTime()-BirthDay.getTime());
+    sectimeold=timeold/1000
+    secondsold=Math.floor(sectimeold);
+    msPerDay=24*60*60*1000
+    e_daysold=timeold/msPerDay
+    daysold=Math.floor(e_daysold);
+    e_hrsold=(e_daysold-daysold)*24;
+    hrsold=setzero(Math.floor(e_hrsold));
+    e_minsold=(e_hrsold-hrsold)*60;
+    minsold=setzero(Math.floor((e_hrsold-hrsold)*60));
+    seconds=setzero(Math.floor((e_minsold-minsold)*60));
+    document.getElementById('days').innerHTML="本站已安全运行"+daysold+"天"+hrsold+"小时"+minsold+"分"+seconds+"秒";
+}
+function setzero(i){
+    if (i<10)
+    {i="0" + i};
+    return i;
+}
+show_date_time();
+</script>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="Total Visitors">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="Total Views">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script>
+<script src="/js/schemes/pisces.js"></script>
+<script src="/js/next-boot.js"></script>
+
+
+
+  
+
+
+
+
+  
+<script src="//cdn.jsdelivr.net/npm/algoliasearch@4/dist/algoliasearch-lite.umd.js"></script>
+<script src="//cdn.jsdelivr.net/npm/instantsearch.js@4/dist/instantsearch.production.min.js"></script><script src="/js/algolia-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
+
+<script>
+NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', () => {
+    var gitalk = new Gitalk({
+      clientID    : '754cac1df904f19c28da',
+      clientSecret: 'aa1ba39270931efd6ffbc8ac1228a7da1e92fced',
+      repo        : 'gitalk-comments',
+      owner       : 'ChengjunJia',
+      admin       : ['ChengjunJia'],
+      id          : '7e8f78af1aba9cd0dafa1da4806a9c9a',
+        language: 'en',
+      distractionFreeMode: true
+    });
+    gitalk.render('gitalk-container');
+  }, window.Gitalk);
+});
+</script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
+</body>
+</html>

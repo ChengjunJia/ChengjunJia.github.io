@@ -1,0 +1,1557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 3.9.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"blog.chengjunjia.site","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="Some tiny things and knowledge about Computer Network Research">
+<meta name="keywords" content="Network, Computer Science, Software">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Blogs">
+<meta property="og:url" content="http://blog.chengjunjia.site/page/2/index.html">
+<meta property="og:site_name" content="Blogs">
+<meta property="og:description" content="Some tiny things and knowledge about Computer Network Research">
+<meta property="og:locale" content="en">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Blogs">
+<meta name="twitter:description" content="Some tiny things and knowledge about Computer Network Research">
+
+<link rel="canonical" href="http://blog.chengjunjia.site/page/2/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : true,
+    isPost : false,
+    lang   : 'en'
+  };
+</script>
+
+  <title>Blogs</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Blogs</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">To become outstanding</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="user fa-fw"></i>About</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="tags fa-fw"></i>Tags</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="archive fa-fw"></i>Archives</a>
+
+  </li>
+        <li class="menu-item menu-item-schedule">
+
+    <a href="/schedule/" rel="section"><i class="calendar fa-fw"></i>Schedule</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container"></div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="algolia-results">
+  <div id="algolia-stats"></div>
+  <div id="algolia-hits"></div>
+  <div id="algolia-pagination" class="algolia-pagination"></div>
+</div>
+
+      
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content index posts-expand">
+            
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://blog.chengjunjia.site/2019/11/19/007-ResearchIdea/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/PersonalLogo.jpg">
+      <meta itemprop="name" content="ChengjunJia">
+      <meta itemprop="description" content="Some tiny things and knowledge about Computer Network Research">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Blogs">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/11/19/007-ResearchIdea/" class="post-title-link" itemprop="url">Research Area</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2019-11-19 08:51:34" itemprop="dateCreated datePublished" datetime="2019-11-19T08:51:34+00:00">2019-11-19</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2022-07-08 06:36:27" itemprop="dateModified" datetime="2022-07-08T06:36:27+00:00">2022-07-08</time>
+              </span>
+
+          <br>
+            <span class="post-meta-item" title="Symbols count in article">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">Symbols count in article: </span>
+              <span>1.3k</span>
+            </span>
+            <span class="post-meta-item" title="Reading time">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">Reading time &asymp;</span>
+              <span>1 mins.</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>记录一下自己涉及的一些的科研方向</p>
+<h3 id="高性能网包处理"><a href="#高性能网包处理" class="headerlink" title="高性能网包处理"></a>高性能网包处理</h3><h4 id="网包分类-Packet-Classification"><a href="#网包分类-Packet-Classification" class="headerlink" title="网包分类(Packet Classification)"></a>网包分类(Packet Classification)</h4><p>这是网络设备的最最基本的要求! 狭义理解可以把一般性的网络转发:最长前缀匹配(LPM), 看作其子类。</p>
+<ul>
+<li>输入: 输入5元组(ip,port,protocol)规则集, 或者是OpenFlow这种自定义协议</li>
+<li>输出: 匹配的规则(可以是最高优先级、也可以是匹配的<strong>所有</strong>规则)</li>
+<li>目标: 低时延、高吞吐(可能通过牺牲时延得到提升, 如batch)、更新响应快</li>
+<li>理论: 计算几何和数据库查询</li>
+<li>实验室背景: 实验室的老方向,进行了10年左右的research。</li>
+<li>方案: TSS、HyperSplit、HiCuts等算法，为了高性能、一般使用树、哈希作为典型数据结构，利用分组、启发式进行决策树分割等方法进行优化。在硬件方向，一般会使用FPGA、TCAM进行硬件优化。</li>
+<li>前沿: <strong>优化或者使用混合方法</strong>。优化的典型是NeuroCuts，使用RL来优化决策树的构造; 混合方法的典型是CutSplit、TSS和树混合等。</li>
+</ul>
+<h4 id="正则匹配-Regular-Expression"><a href="#正则匹配-Regular-Expression" class="headerlink" title="正则匹配(Regular Expression)"></a>正则匹配(Regular Expression)</h4><p>在网络检测中基本的功能</p>
+<ul>
+<li>输入: 正则表达式规则<strong>集</strong>、字符串(流式)</li>
+<li>输出: 命中的规则</li>
+<li>目标: 低时延、高吞吐、更新(更新一般是个次要因素)</li>
+<li>理论: 自动机理论、BDD优化等</li>
+<li>实验室背景: 实验室之前的博士生研究了7年左右的方向。</li>
+<li>方案: DFA和NFA是最基本的两种方法, 基于这两种方法衍生出来了Hybrid-FA、XFA(增加跳转优化)等, 核心解决DFA的内存爆炸和NFA的匹配过慢的问题, 其中还涉及到分组算法以及利用字符串匹配来做预过滤的工程优化。</li>
+<li>前沿: Intel的Hyperscan库</li>
+</ul>
+<h4 id="网包调度-Packet-Scheduling"><a href="#网包调度-Packet-Scheduling" class="headerlink" title="网包调度(Packet Scheduling)"></a>网包调度(Packet Scheduling)</h4><ul>
+<li>输入: 各种流量、人为定义的性能要求</li>
+<li>输出: 按照一定顺序调度流量</li>
+<li>理论: 微分方程(离散网包控制进行连续化–使用窗口)和各种调度理论(未来有可能使用ML优化，但其高性能的要求使得未必工作OK–需要考虑应用背景)。</li>
+<li>实验室背景: 自己从大四开始陆陆续续做了大约1年的方向</li>
+<li>方案: 典型的令牌桶(Token Bucket)、虚拟时钟(Virutal Clock)，加上层级架构和典型的服务调度算法，从而诞生的HTB、WFQ等算法。在硬件方向，使用FPGA做优化(已经有2篇网络顶会Sigcomm/NSDI的文章了)。</li>
+<li>前沿: PIFO引发的统一性的算法设计，这里存在问题的是TB能应对抖动保持高性能，但PIFO(或者说背后的Virtual Clock)应对burst存疑。</li>
+</ul>
+<h3 id="网络管理功能"><a href="#网络管理功能" class="headerlink" title="网络管理功能"></a>网络管理功能</h3><h4 id="网络功能验证-Network-Verification"><a href="#网络功能验证-Network-Verification" class="headerlink" title="网络功能验证(Network Verification)"></a>网络功能验证(Network Verification)</h4><ul>
+<li>实验室背景: 跟随同事参与了解一些东西。</li>
+</ul>
+<p>涵盖的内容有：数据平面的验证(针对网络拓扑和netflow)、控制平面的验证(针对网络功能,例如NFV和Protocol)。典型的算法有：HSA、Batfish等。现在最新的文章聚焦在使用SAT等形式化验证的PL常见内容来进行<br><strong>网络建模(Network Modelling)</strong>可以认为是网络验证的第一步</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://blog.chengjunjia.site/2019/11/18/006-Birthday22/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/PersonalLogo.jpg">
+      <meta itemprop="name" content="ChengjunJia">
+      <meta itemprop="description" content="Some tiny things and knowledge about Computer Network Research">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Blogs">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/11/18/006-Birthday22/" class="post-title-link" itemprop="url">Birthday22</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2019-11-18 08:51:02" itemprop="dateCreated datePublished" datetime="2019-11-18T08:51:02+00:00">2019-11-18</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2022-07-08 06:36:27" itemprop="dateModified" datetime="2022-07-08T06:36:27+00:00">2022-07-08</time>
+              </span>
+
+          <br>
+            <span class="post-meta-item" title="Symbols count in article">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">Symbols count in article: </span>
+              <span>883</span>
+            </span>
+            <span class="post-meta-item" title="Reading time">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">Reading time &asymp;</span>
+              <span>1 mins.</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>我非常喜欢的网络小说作家“愤怒的香蕉”，喜欢在每年生日的时候写一下总结和随笔；我觉得这是一个很好的习惯，所以从今年开始我也尝试每年在生日的时候总结过去、展望未来，写写自己的想法和感悟。</p>
+<h3 id="日月如梭"><a href="#日月如梭" class="headerlink" title="日月如梭"></a>日月如梭</h3><p>我现在是真真正正体会到什么叫做日月如梭，光阴似箭了。我竟然一眨眼已经到了22岁，研究生也已经迈入2年级，我忽然间觉得自己老了许多，总有种步入中年的感觉。</p>
+<p>大学时期的我做事情基本不怎么着急，觉得自己有大把的时间，世界有很多值得探索的地方；但最近一段时间，自己越来越感觉到自己的一事无成、越来越焦躁和功利性、越来越难以专注地长时间学习。</p>
+<p>但这一点我觉得也未必是坏事，毕竟“从长期看，我们都死了”。很多人会讲一些大道理，强调所谓的“后天很美好”，但是现实世界往往是“后年很美好”，乃至“10年后很美好”、“死后很美好”。我们把眼界放到整个社会，很多事情是有价值的、需要有人做的；但如果我们把眼界放到个人，可能所谓“实用性”、“功利性”更加重要。如何在个人发展中平衡“圣人”的“人性”、道德和“常人”的“兽性”、贪婪，是非常重要的事情。毕竟自己现在是入世之人，阳春白雪和饮食男女都是需要一定关注的事情。</p>
+<h3 id="缺乏坚持"><a href="#缺乏坚持" class="headerlink" title="缺乏坚持"></a>缺乏坚持</h3><p>在过去的1年间，对于那些长时间投入的事情，自己半途而废的情形频繁出现：英语、健身、良好作息和良好时间管理。持续性混吃等死、间歇性踌躇满志，这句话对我来说真是扎心。</p>
+<p>健身断断续续进行了半年，在腹肌初现的时候又暂停了1个月，体重迅速增加，逼近130斤；英语学习断断续续进行了2个月，英语口音还是没有改过来。我可以骄傲地说，贡献了健身房和流利说的盈利。</p>
+<p>但自己也还是有收获的，健身找到了门路也起到了一定效果，英语阅读能力得到很好提升。后面自己要做的第1件事就是把这些事情的坚持常态化，坚持每天锻炼1小时、阅读1小时、课外学习1小时、睡眠9小时、工作8小时的节奏，坚持每日、每周和每月的总结。</p>
+<h3 id="三观的塑造"><a href="#三观的塑造" class="headerlink" title="三观的塑造"></a>三观的塑造</h3><p>自己的三观在这1年间渐渐走向定型，感谢我在过去的1年间了解一些康德的思想和“政事堂”的坚持追更。现在的我在世界观上推崇康德，对于所谓的政治、管理有了些认知。未来自己需要在这方面继续努力。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://blog.chengjunjia.site/2019/11/03/005-management/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/PersonalLogo.jpg">
+      <meta itemprop="name" content="ChengjunJia">
+      <meta itemprop="description" content="Some tiny things and knowledge about Computer Network Research">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Blogs">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/11/03/005-management/" class="post-title-link" itemprop="url">Management</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2019-11-03 18:24:33" itemprop="dateCreated datePublished" datetime="2019-11-03T18:24:33+00:00">2019-11-03</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2022-07-08 06:36:27" itemprop="dateModified" datetime="2022-07-08T06:36:27+00:00">2022-07-08</time>
+              </span>
+
+          <br>
+            <span class="post-meta-item" title="Symbols count in article">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">Symbols count in article: </span>
+              <span>419</span>
+            </span>
+            <span class="post-meta-item" title="Reading time">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">Reading time &asymp;</span>
+              <span>1 mins.</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>最近, 有三则新闻都非常火爆:</p>
+<ol>
+<li>华为胡玲发文</li>
+<li>清华学生的《浅谈清华学风、课程内卷、特奖》</li>
+<li>山大的留学生又引起波澜</li>
+</ol>
+<h3 id="管理是门艺术"><a href="#管理是门艺术" class="headerlink" title="管理是门艺术"></a>管理是门艺术</h3><p>当很多人聚集在一起后，就产生管理、政治。我现在越发感觉针对于人的“管理科学”与“政治科学”远比“自然科学”，对个人的发展来说，更加重要；当然，后者对于整个社会的扩大很重要。前者分蛋糕，后者做大蛋糕；分蛋糕的人管理着做蛋糕的人。对于一个时代的人来说，“不患寡而患不均”；而要实现整体的“跨越式发展”，有时候“让一部分富起来，先富带动后富”就更加重要。但是，很少有人能看清楚这一点，或者超越自己的屁股，无论是“先富”还是“先贫”。</p>
+<p>管理，有两个方向：对内和对外；有两个维度：对上和对下。怎么平衡这些关系，是非常复杂的问题；更何况还要考虑到人的不理性的问题。</p>
+<h3 id="大人-时代变了"><a href="#大人-时代变了" class="headerlink" title="大人, 时代变了"></a>大人, 时代变了</h3><p>90后、00后正在崛起，这一代人明显与上一代人有较大的成长背景差异: 衣食无忧、崇尚独立、更加自信，这些人进入到社会以及成为社会主流后，会产生明显的不同。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://blog.chengjunjia.site/2019/10/25/004-wishlist/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/PersonalLogo.jpg">
+      <meta itemprop="name" content="ChengjunJia">
+      <meta itemprop="description" content="Some tiny things and knowledge about Computer Network Research">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Blogs">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/10/25/004-wishlist/" class="post-title-link" itemprop="url">Wishlist</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2019-10-25 16:30:07" itemprop="dateCreated datePublished" datetime="2019-10-25T16:30:07+00:00">2019-10-25</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2022-07-08 06:36:27" itemprop="dateModified" datetime="2022-07-08T06:36:27+00:00">2022-07-08</time>
+              </span>
+
+          <br>
+            <span class="post-meta-item" title="Symbols count in article">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">Symbols count in article: </span>
+              <span>267</span>
+            </span>
+            <span class="post-meta-item" title="Reading time">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">Reading time &asymp;</span>
+              <span>1 mins.</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>Patience, the ability to put your desires on hold for a time, is a presious and rare virtue.</p>
+<h3 id="Cool-things"><a href="#Cool-things" class="headerlink" title="Cool things"></a>Cool things</h3><h3 id="Consumer-Electronics"><a href="#Consumer-Electronics" class="headerlink" title="Consumer Electronics"></a>Consumer Electronics</h3><h3 id="Personal-Desire"><a href="#Personal-Desire" class="headerlink" title="Personal Desire"></a>Personal Desire</h3><ul>
+<li>男士护肤: 养成用大宝、护手霜的习惯</li>
+<li>男士香水: 知乎上有各种推荐, 用起来感觉不错～</li>
+</ul>
+<h3 id="随身物品"><a href="#随身物品" class="headerlink" title="随身物品"></a>随身物品</h3><h4 id="1-文具类"><a href="#1-文具类" class="headerlink" title="1. 文具类"></a>1. 文具类</h4><ul>
+<li>笔(红、黑各一支+备用)</li>
+<li>本子(日常使用的记录本、草稿纸)</li>
+<li>瑞士军刀</li>
+<li>安卓平板(划掉)</li>
+</ul>
+<h4 id="2-生活类"><a href="#2-生活类" class="headerlink" title="2. 生活类"></a>2. 生活类</h4><ul>
+<li>垃圾袋</li>
+<li>口香糖</li>
+<li>雨伞</li>
+<li>水杯</li>
+<li>胃药</li>
+<li>钱包(证件)</li>
+<li>手套(冬)</li>
+<li>护手霜</li>
+<li>纸巾、湿巾</li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://blog.chengjunjia.site/2019/10/18/003-anniversary3/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/PersonalLogo.jpg">
+      <meta itemprop="name" content="ChengjunJia">
+      <meta itemprop="description" content="Some tiny things and knowledge about Computer Network Research">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Blogs">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/10/18/003-anniversary3/" class="post-title-link" itemprop="url">Anniversary Three Years</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2019-10-18 00:00:00" itemprop="dateCreated datePublished" datetime="2019-10-18T00:00:00+00:00">2019-10-18</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2022-07-08 06:36:27" itemprop="dateModified" datetime="2022-07-08T06:36:27+00:00">2022-07-08</time>
+              </span>
+
+          <br>
+            <span class="post-meta-item" title="Symbols count in article">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">Symbols count in article: </span>
+              <span>697</span>
+            </span>
+            <span class="post-meta-item" title="Reading time">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">Reading time &asymp;</span>
+              <span>1 mins.</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          有东西被加密了, 请输入8位数字(生日)查看.
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2019/10/18/003-anniversary3/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://blog.chengjunjia.site/2019/09/20/001-V2RayConfigure/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/PersonalLogo.jpg">
+      <meta itemprop="name" content="ChengjunJia">
+      <meta itemprop="description" content="Some tiny things and knowledge about Computer Network Research">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Blogs">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/09/20/001-V2RayConfigure/" class="post-title-link" itemprop="url">V2RayConfigure</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2019-09-20 10:53:56" itemprop="dateCreated datePublished" datetime="2019-09-20T10:53:56+00:00">2019-09-20</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2022-07-08 06:36:27" itemprop="dateModified" datetime="2022-07-08T06:36:27+00:00">2022-07-08</time>
+              </span>
+
+          <br>
+            <span class="post-meta-item" title="Symbols count in article">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">Symbols count in article: </span>
+              <span>5.9k</span>
+            </span>
+            <span class="post-meta-item" title="Reading time">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">Reading time &asymp;</span>
+              <span>5 mins.</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h3 id="Background"><a href="#Background" class="headerlink" title="Background"></a>Background</h3><p>It is well known that the GFW makes it difficult to use Google which is necessary for research. With National Day coming, many IPs are blocked. However, the IPv6 address is not blocked, perhaps because the address is too long to be matched fast.</p>
+<p>Anyway, we can not connect to the VPS via IPv4, but via IPv6. It is reasonable for us to buy a VPS with IPv6 address and reach Google Scholar with it.</p>
+<h3 id="Buy-VPS"><a href="#Buy-VPS" class="headerlink" title="Buy VPS"></a>Buy VPS</h3><p>There are many merchants, providing VPS. You can find these merchants in many websites, such as <a href="https://www.vpser.net/ten-dollars-vps" target="_blank" rel="noopener">VPS Recommend</a> and <a href="https://www.zhujiceping.com/vps" target="_blank" rel="noopener">Zhujiceping</a>. What’s more, you can get similar information by searching in Github. I use the <strong>Ramnode</strong> for 2 years and it works well.</p>
+<h4 id="How-to-choose-one"><a href="#How-to-choose-one" class="headerlink" title="How to choose one"></a>How to choose one</h4><p>If we ignore the overselling problem, which is the main reason for bad performance under normal conditions, the main features we need to consider about are as follows.</p>
+<ol>
+<li>Latency. It is most important!!! However, because of the physical links and government regulation, the latency from mainland of China to VPS in Japan or Singapore is more than 100ms. HongKong, China is better, but still needs 50ms or more. As a result, if you want to play online games, VPS is not suitable for you but some other technologies.</li>
+<li>CPU and RAM. If you just install V2ray and other simple softwares, 128M RAM is enough. If you want your own blog on the VPS, better CPU and more RAM is necessary.</li>
+<li>Bandwidth. It is least important. Because even 500GB is enough for <strong>private</strong> use but if you would like to see many academic videos on Youtube, you need more bandwidth as 20-minutes HD video needs 1GB or more. </li>
+</ol>
+<p>To better understand the difference of VPS, some virtualization technologies are vital. There are three main virtualization technologies used in VPS: Xen, KVM and OpenVZ. You can get more information from <a href="https://www.booleanworld.com/openvz-vs-kvm-vs-xen-virtualization-technologies-explained/" target="_blank" rel="noopener">this link</a>.</p>
+<ol>
+<li>OpenVZ, in fact, is not virtualization technology but Linux-based containerization technology. <strong>You can not run Docker on it or modify kernel modules</strong>, but OpenVZ VPS is cheapest.</li>
+<li>Xen is an open-source virtualization platform that originally began as a research project in the University of Cambridge. It uses <em>QEMU</em> to provide complete hardware emulation.</li>
+<li>KVM is a kernel module, and reuses many functions of the Linux kernel for its purposes. It only runs on hardware that supports hardware-assisted virtualization, and is common.</li>
+</ol>
+<h3 id="Buy-Domain-Name"><a href="#Buy-Domain-Name" class="headerlink" title="Buy Domain Name"></a>Buy Domain Name</h3><p>It is necessary to buy a domain name because it is hard for us to remember 120.12.6.78 or 2340:234:be::12f. Besides, we can just change the DNS configuration without changing the configuration of our programs, which is very convenient. You can get a ‘.site’ domain for 10 year with about $30, which is not very expensive.</p>
+<h3 id="Install-V2ray"><a href="#Install-V2ray" class="headerlink" title="Install V2ray"></a>Install V2ray</h3><p>You can install v2ray buy run the <strong>go.sh</strong> from <a href="https://install.direct/go.sh" target="_blank" rel="noopener">https://install.direct/go.sh</a> and refer to the <a href="https://www.v2ray.com/en/welcome/install.html" target="_blank" rel="noopener">official doc</a>.</p>
+<p>After installation, you need to configure the <strong>config.json</strong>. I recommend to use the <strong>mKCP</strong> or <strong>QUIC</strong>,which is faster, for the connection between client and VPS. You can get the configuration from Internet easily. The inbound configuration in VPS and the outbound configuration must be the same, for example:</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">"outbounds": [&#123;</span><br><span class="line">   "protocol": "vmess",</span><br><span class="line">   "settings": &#123;</span><br><span class="line">       "vnext": [</span><br><span class="line">           &#123;</span><br><span class="line">               <span class="attr">"address"</span>: [<span class="string">"123::00"</span>],</span><br><span class="line">               <span class="attr">"port"</span>: [<span class="number">123</span>],</span><br><span class="line">               <span class="attr">"users"</span>:[</span><br><span class="line">                   &#123;</span><br><span class="line">                       <span class="attr">"id"</span>: [<span class="string">"4684-4565"</span>],</span><br><span class="line">                       <span class="attr">"level"</span>: <span class="number">1</span>,</span><br><span class="line">                       <span class="attr">"alterId"</span>: <span class="number">64</span></span><br><span class="line">                   &#125;</span><br><span class="line">               ]</span><br><span class="line">           &#125;</span><br><span class="line">       ]&#125;,</span><br><span class="line">       "streamSettings": &#123;</span><br><span class="line">       "network": "mkcp",</span><br><span class="line">       "kcpSettings": &#123;</span><br><span class="line">         "uplinkCapacity": 5,</span><br><span class="line">         "downlinkCapacity": 100,</span><br><span class="line">         "congestion": true,</span><br><span class="line">         "header": &#123;</span><br><span class="line">           "type": "none"</span><br><span class="line">         &#125;</span><br><span class="line">       &#125;</span><br><span class="line">     &#125;</span><br><span class="line"> &#125;]</span><br></pre></td></tr></table></figure>
+
+<p>The configuration of inbound in client can be personalized with socks or http, with authentication or without, for example:</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">"inbounds": [&#123;</span><br><span class="line">   "port": [123],</span><br><span class="line">   "protocol": "socks",</span><br><span class="line">   "sniffing":&#123;</span><br><span class="line">       "enabled": true,</span><br><span class="line">       "destOverride": ["http", "tls"]</span><br><span class="line">   &#125;,</span><br><span class="line">   "settings": &#123;</span><br><span class="line">       "auth": "noauth"</span><br><span class="line">   &#125;</span><br><span class="line"> &#125;],</span><br></pre></td></tr></table></figure>
+
+<p>The configuration of outbound in VPS needs to be as follows:</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">"outbounds": [</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="attr">"protocol"</span>: <span class="string">"freedom"</span>,</span><br><span class="line">      <span class="attr">"settings"</span>: &#123;&#125;</span><br><span class="line">    &#125;</span><br><span class="line">  ]</span><br></pre></td></tr></table></figure>
+
+<h3 id="Configure-IPv6-in-Aliyun"><a href="#Configure-IPv6-in-Aliyun" class="headerlink" title="Configure IPv6 in Aliyun"></a>Configure IPv6 in Aliyun</h3><p>IPv6 is supported by China Mobile and other Mobile Network Operators. However, we can not use IPv6 sometimes. So we may need another server in China:</p>
+<p><strong>Client &lt;– IPv4 –&gt; China Server &lt;– IPv6 –&gt; Abroad Server</strong></p>
+<p>The ‘China Server’ need to support both IPv4 and IPv6, but it is hard in China now. Aliyun, Tencent Cloud and some other Cloud provider do not support IPv6 directly. So we need to use tunnel: 6in4. We can use the tunnel broker of HE.</p>
+<h4 id="Enable-IPv6-in-Aliyun"><a href="#Enable-IPv6-in-Aliyun" class="headerlink" title="Enable IPv6 in Aliyun"></a>Enable IPv6 in Aliyun</h4><p>Modify the /etc/sysctl.conf to support IPv6:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">net.ipv6.conf.all.disable_ipv6 = <span class="number">0</span></span><br><span class="line">net.ipv6.conf.default.disable_ipv6 = <span class="number">0</span></span><br><span class="line">net.ipv6.conf.lo.disable_ipv6 = <span class="number">0</span></span><br></pre></td></tr></table></figure>
+
+<p>Restart network to support IPv6, and check with <em>ifconfig</em>.</p>
+<h4 id="Register-Tunnel-Broker"><a href="#Register-Tunnel-Broker" class="headerlink" title="Register Tunnel Broker"></a>Register Tunnel Broker</h4><p>The website is <a href="https://www.tunnelbroker.net/" target="_blank" rel="noopener">https://www.tunnelbroker.net/</a> and make a registeration. Create a regular tunnel and use the public IP of Aliyun server to generate a tunnel. After this, you can get an example configurations for Linux-route2, which is suitable for CentOS. You need to change the public IP into private IP in Aliyun.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">modprobe ipv6</span><br><span class="line">ip tunnel add he-ipv6 mode sit remote 66.220.18.42 <span class="built_in">local</span> [Private IP] ttl 255</span><br><span class="line">ip link <span class="built_in">set</span> he-ipv6 up</span><br><span class="line">ip addr add 2001:470:c:17cb::2/64 dev he-ipv6</span><br><span class="line">ip route add ::/0 dev he-ipv6</span><br><span class="line">ip -f inet6 addr</span><br></pre></td></tr></table></figure>
+
+<p>Use ping6 command to check and try to ping your VPS abroad. And install V2ray in Aliyun too and make the inbound configuration as http or socks. You can use vmess or mKCP too if you would like. Finally, you get the following infrasturature and are able to reach Google Scholar.</p>
+<p><strong>Client &lt;– Socks –&gt; China Server &lt;– V2ray –&gt; Abroad Server</strong></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://blog.chengjunjia.site/2019/09/04/000-0-DPDK-Learning/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/PersonalLogo.jpg">
+      <meta itemprop="name" content="ChengjunJia">
+      <meta itemprop="description" content="Some tiny things and knowledge about Computer Network Research">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Blogs">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/09/04/000-0-DPDK-Learning/" class="post-title-link" itemprop="url">DPDK Learning(个人参考使用)</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2019-09-04 00:00:00" itemprop="dateCreated datePublished" datetime="2019-09-04T00:00:00+00:00">2019-09-04</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2022-07-08 06:36:27" itemprop="dateModified" datetime="2022-07-08T06:36:27+00:00">2022-07-08</time>
+              </span>
+
+          <br>
+            <span class="post-meta-item" title="Symbols count in article">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">Symbols count in article: </span>
+              <span>416</span>
+            </span>
+            <span class="post-meta-item" title="Reading time">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">Reading time &asymp;</span>
+              <span>1 mins.</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>学习DPDK的相关知识，使用《深入浅出DPDK》这一本书和DPDK官网的document足够了。</p>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><ol>
+<li>从DPDK官网下载LTS版本</li>
+<li>安装依赖(主要是gcc\numa-dev\kernel-dev)</li>
+<li>解压DPDK源码后进入tool文件夹下，执行对应安装的sh脚本，根据指示编译源码、安装驱动、绑定PCI网卡设备、配置大页</li>
+<li>export RTE_SDK和RTE_TARGET</li>
+<li>根据examples文件夹下的程序对应修改即可</li>
+</ol>
+<h2 id="代码使用注意事项"><a href="#代码使用注意事项" class="headerlink" title="代码使用注意事项"></a>代码使用注意事项</h2><ol>
+<li>要理解mempool的概念(大页内存的使用)和rte_mbuf的申请、回收</li>
+<li>要理解调用EAL做argv解析和examples给出的网卡初始化过程中的一系列事宜: 分配Queue给Rx、分配TxBuffer，设置端口性质等。可以参考<a href="https://www.yuque.com/zzqcn/opensource/oirzxh" target="_blank" rel="noopener">博文</a></li>
+<li>定义结构体的时候, 要通过<strong>attribute</strong>((packed)) 来说明结构体不进行Cache对齐，否则gcc优化会自动进行CacheLine对齐为4B整数倍。相关说明参考<a href="https://my.oschina.net/u/4306777/blog/3610648" target="_blank" rel="noopener">博文</a></li>
+</ol>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://blog.chengjunjia.site/2019/09/04/000-0-Linux-Learning/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/PersonalLogo.jpg">
+      <meta itemprop="name" content="ChengjunJia">
+      <meta itemprop="description" content="Some tiny things and knowledge about Computer Network Research">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Blogs">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/09/04/000-0-Linux-Learning/" class="post-title-link" itemprop="url">Linux Learning(个人参考使用)</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2019-09-04 00:00:00" itemprop="dateCreated datePublished" datetime="2019-09-04T00:00:00+00:00">2019-09-04</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2022-07-08 06:36:27" itemprop="dateModified" datetime="2022-07-08T06:36:27+00:00">2022-07-08</time>
+              </span>
+
+          <br>
+            <span class="post-meta-item" title="Symbols count in article">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">Symbols count in article: </span>
+              <span>1.9k</span>
+            </span>
+            <span class="post-meta-item" title="Reading time">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">Reading time &asymp;</span>
+              <span>2 mins.</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="常见命令"><a href="#常见命令" class="headerlink" title="常见命令"></a>常见命令</h2><table>
+<thead>
+<tr>
+<th align="left">Command</th>
+<th align="left">Usage</th>
+<th align="left">Other Info</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">uname</td>
+<td align="left">查看内核信息</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">fdisk</td>
+<td align="left">查看磁盘信息</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">blkid</td>
+<td align="left">更改磁盘信息</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">ln</td>
+<td align="left">建立软链接</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">dpkg</td>
+<td align="left">deb包安装使用等</td>
+<td align="left">-i [.deb]安装; -r 删除</td>
+</tr>
+<tr>
+<td align="left">unzip</td>
+<td align="left">zip解压</td>
+<td align="left">unzip [-x xlist] [-d exdir]</td>
+</tr>
+<tr>
+<td align="left">env</td>
+<td align="left">查看环境变量</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">alias</td>
+<td align="left">重命名命令</td>
+<td align="left">alias ls=”ls -al”</td>
+</tr>
+<tr>
+<td align="left">service</td>
+<td align="left">服务启动</td>
+<td align="left">/etc/init.d/ 或 /etc/init/下的脚本的执行</td>
+</tr>
+<tr>
+<td align="left">scp</td>
+<td align="left">ssh传输文件</td>
+<td align="left">scp [-r] [-P port] 本地 user@ip:/home/.</td>
+</tr>
+<tr>
+<td align="left">ssh</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">ssh-keygen</td>
+<td align="left">产生ssh指纹</td>
+<td align="left">和ssh-copy-id user@host使用来免密登</td>
+</tr>
+</tbody></table>
+<h2 id="文件位置说明"><a href="#文件位置说明" class="headerlink" title="文件位置说明"></a>文件位置说明</h2><table>
+<thead>
+<tr>
+<th align="left">Location</th>
+<th align="left">Usage</th>
+<th align="left">Other Info</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">/etc/fstab</td>
+<td align="left">磁盘开机挂载</td>
+<td align="left">UUID使用<strong>fdisk -l</strong>查看</td>
+</tr>
+<tr>
+<td align="left">/proc/version</td>
+<td align="left">当前系统的内核版本号及系统名称,<strong>uname</strong>命令就是这样执行的</td>
+<td align="left">/proc是系统内核映像,文件位于内存,可访问内核数据</td>
+</tr>
+<tr>
+<td align="left">/etc/rc.local</td>
+<td align="left">开机启动</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">~/.bashrc</td>
+<td align="left">bash加载前执行(interactive non-login shell)</td>
+<td align="left">注意<strong>alias, export</strong>等命令定义</td>
+</tr>
+<tr>
+<td align="left">~/.bash_profile</td>
+<td align="left">login shell执行</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">/usr/share/applications</td>
+<td align="left">增加dash快速启动内容</td>
+<td align="left">.desktop的定义参考目录下的其他文件</td>
+</tr>
+</tbody></table>
+<h2 id="Grub引导"><a href="#Grub引导" class="headerlink" title="Grub引导"></a>Grub引导</h2><p>Grub是一个linux引导程序</p>
+<h3 id="待办：grub的实际运行原理调研"><a href="#待办：grub的实际运行原理调研" class="headerlink" title="待办：grub的实际运行原理调研"></a>待办：grub的实际运行原理调研</h3><h3 id="EFI-GPT问题"><a href="#EFI-GPT问题" class="headerlink" title="EFI,GPT问题"></a>EFI,GPT问题</h3><p>问题解决参照 <a href="http://www.mintos.org/skill/rescue-efi-grub.html" target="_blank" rel="noopener">www.mintos.org/skill/rescue-efi-grub.html</a></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">mount /dev/sda4 /mnt（注意先确认自己的 / 分区是 sdaX）  </span><br><span class="line">mount /dev/sda1 /mnt/boot/efi  </span><br><span class="line">mount -t proc proc /mnt/proc  </span><br><span class="line">mount -t sysfs sys /mnt/sys  </span><br><span class="line">mount -o bind /dev /mnt/dev  </span><br><span class="line">mount -t devpts pts /mnt/dev/pts/  </span><br><span class="line">chroot /mnt  </span><br><span class="line">grub-install /dev/sda1  </span><br><span class="line">update-grub2</span><br></pre></td></tr></table></figure>
+
+<p>或者，先添加ubuntu启动项到efi中，再修复  </p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mount /dev/sdb4 /mnt/system  </span><br><span class="line">mount /dev/sdb1 /mnt/system/boot/efi  </span><br><span class="line">efibootmgr -c -d /dev/sdb -p 2 -w -L ubuntu</span><br></pre></td></tr></table></figure>
+
+<p>重启进入ubuntu后，<code>grub-install /dev/sda1； update-grub2</code></p>
+<h2 id="Vim使用"><a href="#Vim使用" class="headerlink" title="Vim使用"></a>Vim使用</h2><h3 id="Command"><a href="#Command" class="headerlink" title="Command"></a>Command</h3><table>
+<thead>
+<tr>
+<th align="left">Normal状态下</th>
+<th align="left">Usage</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">0/$</td>
+<td align="left">移动到行首/行尾</td>
+</tr>
+<tr>
+<td align="left">^/g_</td>
+<td align="left">到行首/行尾非blank字符</td>
+</tr>
+<tr>
+<td align="left">/pattern</td>
+<td align="left">搜索(n/N跳转)</td>
+</tr>
+<tr>
+<td align="left">I/A</td>
+<td align="left">行首/行尾插入</td>
+</tr>
+<tr>
+<td align="left">o/O</td>
+<td align="left">插入一行在行后/前</td>
+</tr>
+<tr>
+<td align="left">a</td>
+<td align="left">光标后插入</td>
+</tr>
+<tr>
+<td align="left">p/P</td>
+<td align="left">粘贴当前位置后/前</td>
+</tr>
+<tr>
+<td align="left">yy</td>
+<td align="left">拷贝当前行，相当于ddP</td>
+</tr>
+<tr>
+<td align="left">u/ C-r</td>
+<td align="left">undo/redo</td>
+</tr>
+<tr>
+<td align="left">[num]G</td>
+<td align="left">移动到第N行</td>
+</tr>
+<tr>
+<td align="left">gg/G</td>
+<td align="left">移动到第一行/最后一行</td>
+</tr>
+<tr>
+<td align="left">w/e</td>
+<td align="left">下一个单词开头/本单词结尾</td>
+</tr>
+<tr>
+<td align="left">W/E</td>
+<td align="left">以blank作为分割的下一个单词</td>
+</tr>
+<tr>
+<td align="left">%</td>
+<td align="left">匹配括号移动</td>
+</tr>
+<tr>
+<td align="left">*/#</td>
+<td align="left">匹配当前单词，移动上一个/下一个</td>
+</tr>
+<tr>
+<td align="left">f/t [c]</td>
+<td align="left">到下一个c字符处或c字符前的一个位置</td>
+</tr>
+<tr>
+<td align="left">F/T [c]</td>
+<td align="left">相反方向</td>
+</tr>
+<tr>
+<td align="left">C-n/C-p</td>
+<td align="left">自动补全功能出现</td>
+</tr>
+<tr>
+<td align="left">r[c]</td>
+<td align="left">用c字符取代当前</td>
+</tr>
+<tr>
+<td align="left">ce</td>
+<td align="left">change until end</td>
+</tr>
+</tbody></table>
+<p>[num]+command:重复某个命令num次</p>
+<p>[start postion]+command+[end postion]:<br>dt”:删除所有字符直到”</p>
+<h3 id="块操作"><a href="#块操作" class="headerlink" title="块操作"></a>块操作</h3><p>块操作，典型的操作： 0 C-v C-d I– [ESC]<br>^ → 到行头<br>C-v → 开始块操作<br>C-d → 向下移动 (你也可以使用hjkl来移动光标，或是使用%，或是别的)<br>I– [ESC] → I是插入，插入“–”，按ESC键来为每一行生效。</p>
+<h3 id="Setting-files"><a href="#Setting-files" class="headerlink" title="Setting files"></a>Setting files</h3><table>
+<thead>
+<tr>
+<th align="left">Command</th>
+<th align="left">Usage</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">:e [filename]</td>
+<td align="left">打开</td>
+</tr>
+<tr>
+<td align="left">:x/:wq/ ZZ</td>
+<td align="left">保存并关闭</td>
+</tr>
+<tr>
+<td align="left">:bn/:bp</td>
+<td align="left">前后一个文件</td>
+</tr>
+<tr>
+<td align="left">:set nu!</td>
+<td align="left">显示行号</td>
+</tr>
+<tr>
+<td align="left">:syntax on</td>
+<td align="left">高亮显示</td>
+</tr>
+<tr>
+<td align="left">:s/old/new/gc</td>
+<td align="left">取代字符,加g表示本行，加c表示确认</td>
+</tr>
+</tbody></table>
+<h3 id="分屏"><a href="#分屏" class="headerlink" title="分屏"></a>分屏</h3><table>
+<thead>
+<tr>
+<th align="left">Command</th>
+<th align="left">Usage</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">:sp [filename]</td>
+<td align="left">上下分割，打开文件,空白则是当前文件</td>
+</tr>
+<tr>
+<td align="left">:vsp [filename]</td>
+<td align="left">左右分割，打开文件</td>
+</tr>
+<tr>
+<td align="left">C-w hjkl</td>
+<td align="left">光标在各个屏之间移动</td>
+</tr>
+<tr>
+<td align="left">C-w c</td>
+<td align="left">关闭屏幕</td>
+</tr>
+</tbody></table>
+<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><ol>
+<li><a href="https://coolshell.cn/articles/5426.html" target="_blank" rel="noopener">https://coolshell.cn/articles/5426.html</a></li>
+</ol>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://blog.chengjunjia.site/2019/09/04/000-hello-world/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/PersonalLogo.jpg">
+      <meta itemprop="name" content="ChengjunJia">
+      <meta itemprop="description" content="Some tiny things and knowledge about Computer Network Research">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Blogs">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/09/04/000-hello-world/" class="post-title-link" itemprop="url">Configure the Blog</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2019-09-04 00:00:00" itemprop="dateCreated datePublished" datetime="2019-09-04T00:00:00+00:00">2019-09-04</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2022-07-08 06:36:27" itemprop="dateModified" datetime="2022-07-08T06:36:27+00:00">2022-07-08</time>
+              </span>
+
+          <br>
+            <span class="post-meta-item" title="Symbols count in article">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">Symbols count in article: </span>
+              <span>4.5k</span>
+            </span>
+            <span class="post-meta-item" title="Reading time">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">Reading time &asymp;</span>
+              <span>4 mins.</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>Welcome to My Blog. This is my very first post. I hope that I can help someone.</p>
+<h3 id="Blog-Initailization"><a href="#Blog-Initailization" class="headerlink" title="Blog Initailization"></a>Blog Initailization</h3><p>My Blog is based on the <em>Hexo</em>, thanks to the <strong>Github Pages</strong>.<br>To beautify my blog, I use the theme: <a href="https://github.com/theme-next/hexo-theme-next" target="_blank" rel="noopener">next</a> and modify some settings.<br>We need to use <em>git clone <a href="https://github.com/theme-next/hexo-theme-next" target="_blank" rel="noopener">https://github.com/theme-next/hexo-theme-next</a> themes/next</em> to install.<br>After the Installation, I modify the Personal Information and other configurations according to <a href="http://eternalzttz.com/hexo-next.html" target="_blank" rel="noopener">Instructions</a>.</p>
+<h3 id="Personalization"><a href="#Personalization" class="headerlink" title="Personalization"></a>Personalization</h3><p>I add ‘Blog Life’, ‘Visitor number’ and ‘Personal Information’.<br>The key is to modify the <em>_config.yml</em> of <strong>Next</strong> and <strong>Hexo</strong>.<br>And with the help of <em>js</em> codes, we can add some interesting functions.</p>
+<h4 id="Menu"><a href="#Menu" class="headerlink" title="Menu"></a>Menu</h4><ol>
+<li><p>Create the files<br>Files are stored in ./source/: hexo new page “about”.<br>We can create a markdown file in ./source/about and modify it. Btw, blog articles are in ./source/_posts.<br>I add my CV in the about menu.</p>
+</li>
+<li><p>Remember to modify the <strong>Next</strong> config of ‘menu’.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">menu:</span><br><span class="line">  home: / || home   </span><br><span class="line">  about: /about/ || user  </span><br><span class="line">  tags: /tags/ || tags   </span><br><span class="line">  categories: /categories/ || th </span><br><span class="line">  archives: /archives/ || archive  </span><br><span class="line">  #schedule: /schedule/ || calendar  </span><br><span class="line">  #sitemap: /sitemap.xml || sitemap   </span><br><span class="line">  #commonweal: /404/ || heartbeat   </span><br><span class="line"></span><br><span class="line">avatar:</span><br><span class="line">  # in theme directory(source/images): /images/avatar.gif</span><br><span class="line">  # in site  directory(source/uploads): /uploads/avatar.gif</span><br><span class="line">  # You can also use other linking images.</span><br><span class="line">   - url: /images/avatar.gif</span><br><span class="line">   + url: /images/header.jpg     # Picture link</span><br><span class="line">  # If true, the avatar would be dispalyed in circle. </span><br><span class="line">  rounded: false</span><br><span class="line">  # The value of opacity should be choose from 0 to 1 to set the opacity of the avatar.</span><br><span class="line">  opacity: 1</span><br><span class="line">  # If true, the avatar would be rotated with the cursor.</span><br><span class="line">  rotated: false</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<h4 id="Search"><a href="#Search" class="headerlink" title="Search"></a>Search</h4><ol>
+<li>To enable search function, run: <em>npm install hexo-generator-searchdb –save</em></li>
+<li>Modify <strong>Hexo</strong> config of ‘search’.<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">search:  # add the search function</span><br><span class="line">  path: search.xml</span><br><span class="line">  field: post</span><br><span class="line">  format: html</span><br><span class="line">  limit: 10000</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<h4 id="RSS"><a href="#RSS" class="headerlink" title="RSS"></a>RSS</h4><ol>
+<li>Install the plugin, run: <em>npm install –save hexo-generator-feed</em></li>
+<li>Modify the <strong>Hexo</strong> and <strong>Next</strong> config.<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># In Hexo</span><br><span class="line">plugins: hexo-generate-feed</span><br><span class="line"></span><br><span class="line"># In Next</span><br><span class="line">rss: /atom.xml</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<h4 id="Count"><a href="#Count" class="headerlink" title="Count"></a>Count</h4><ol>
+<li>Install the plugin, run: <em>npm install hexo-symbols-count-time –save</em></li>
+<li>Modify the <strong>Hexo</strong> config and <strong>Next</strong>.<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"># In Hexo</span><br><span class="line">symbols_count_time:</span><br><span class="line">  symbols: true</span><br><span class="line">  time: true</span><br><span class="line">  total_symbols: true</span><br><span class="line">  total_time: true</span><br><span class="line"></span><br><span class="line"># In Next</span><br><span class="line">busuanzi_count:</span><br><span class="line">  enable: true</span><br><span class="line">  total_visitors: true</span><br><span class="line">  total_visitors_icon: user</span><br><span class="line">  total_views: true</span><br><span class="line">  total_views_icon: eye</span><br><span class="line">  post_views: true</span><br><span class="line">  post_views_icon: eye</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<h4 id="Run-time"><a href="#Run-time" class="headerlink" title="Run time"></a>Run time</h4><ol>
+<li><p>Modify /blog/themes/next/layout/_partials/footer.swig, add the codes:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id=<span class="string">"days"</span>&gt;&lt;/div&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">show_date_time</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">window</span>.setTimeout(<span class="string">"show_date_time()"</span>, <span class="number">1000</span>);</span><br><span class="line">    BirthDay=<span class="keyword">new</span> <span class="built_in">Date</span>(<span class="string">"04/17/2018 15:13:14"</span>);<span class="comment">//修改为自己的blog建站时间</span></span><br><span class="line">    today=<span class="keyword">new</span> <span class="built_in">Date</span>();</span><br><span class="line">    timeold=(today.getTime()-BirthDay.getTime());</span><br><span class="line">    sectimeold=timeold/<span class="number">1000</span></span><br><span class="line">    secondsold=<span class="built_in">Math</span>.floor(sectimeold);</span><br><span class="line">    msPerDay=<span class="number">24</span>*<span class="number">60</span>*<span class="number">60</span>*<span class="number">1000</span></span><br><span class="line">    e_daysold=timeold/msPerDay</span><br><span class="line">    daysold=<span class="built_in">Math</span>.floor(e_daysold);</span><br><span class="line">    e_hrsold=(e_daysold-daysold)*<span class="number">24</span>;</span><br><span class="line">    hrsold=setzero(<span class="built_in">Math</span>.floor(e_hrsold));</span><br><span class="line">    e_minsold=(e_hrsold-hrsold)*<span class="number">60</span>;</span><br><span class="line">    minsold=setzero(<span class="built_in">Math</span>.floor((e_hrsold-hrsold)*<span class="number">60</span>));</span><br><span class="line">    seconds=setzero(<span class="built_in">Math</span>.floor((e_minsold-minsold)*<span class="number">60</span>));</span><br><span class="line">    <span class="built_in">document</span>.getElementById(<span class="string">'days'</span>).innerHTML=<span class="string">"本站已安全运行"</span>+daysold+<span class="string">"天"</span>+hrsold+<span class="string">"小时"</span>+minsold+<span class="string">"分"</span>+seconds+<span class="string">"秒"</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">setzero</span>(<span class="params">i</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (i&lt;<span class="number">10</span>)</span><br><span class="line">    &#123;i=<span class="string">"0"</span> + i&#125;;</span><br><span class="line">    <span class="keyword">return</span> i;</span><br><span class="line">&#125;</span><br><span class="line">show_date_time();</span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>In the <strong>markdown</strong> files, we can add the js codes. For example, with girlfriend.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id=<span class="string">"withGirlFriend"</span>&gt;&lt;/div&gt;</span><br><span class="line">&lt;script type=<span class="string">"text/javascript"</span>&gt;</span><br><span class="line"><span class="keyword">var</span> now = <span class="keyword">new</span> <span class="built_in">Date</span>();</span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">createtime</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">var</span> grt= <span class="keyword">new</span> <span class="built_in">Date</span>(<span class="string">"10/18/2016 22:30:00"</span>);</span><br><span class="line">        now.setTime(now.getTime()+<span class="number">250</span>);</span><br><span class="line">        days = (now - grt ) / <span class="number">1000</span> / <span class="number">60</span> / <span class="number">60</span> / <span class="number">24</span>; dnum = <span class="built_in">Math</span>.floor(days);</span><br><span class="line">        hours = (now - grt ) / <span class="number">1000</span> / <span class="number">60</span> / <span class="number">60</span> - (<span class="number">24</span> * dnum); hnum = <span class="built_in">Math</span>.floor(hours);</span><br><span class="line">        <span class="keyword">if</span>(<span class="built_in">String</span>(hnum).length ==<span class="number">1</span> )&#123;hnum = <span class="string">"0"</span> + hnum;&#125; minutes = (now - grt ) / <span class="number">1000</span> /<span class="number">60</span> - (<span class="number">24</span> * <span class="number">60</span> * dnum) - (<span class="number">60</span> * hnum);</span><br><span class="line">        mnum = <span class="built_in">Math</span>.floor(minutes); <span class="keyword">if</span>(<span class="built_in">String</span>(mnum).length ==<span class="number">1</span> )&#123;mnum = <span class="string">"0"</span> + mnum;&#125;</span><br><span class="line">        seconds = (now - grt ) / <span class="number">1000</span> - (<span class="number">24</span> * <span class="number">60</span> * <span class="number">60</span> * dnum) - (<span class="number">60</span> * <span class="number">60</span> * hnum) - (<span class="number">60</span> * mnum);</span><br><span class="line">        snum = <span class="built_in">Math</span>.round(seconds); <span class="keyword">if</span>(<span class="built_in">String</span>(snum).length ==<span class="number">1</span> )&#123;snum = <span class="string">"0"</span> + snum;&#125;</span><br><span class="line">        <span class="built_in">document</span>.getElementById(<span class="string">"withGirlFriend"</span>).innerHTML = <span class="string">"和女友在一起"</span>+dnum+<span class="string">" 天 "</span> + hnum + <span class="string">" 小时 "</span> + mnum + <span class="string">" 分 "</span> + snum + <span class="string">" 秒"</span>;</span><br><span class="line">    &#125;</span><br><span class="line">setInterval(<span class="string">"createtime()"</span>,<span class="number">250</span>);</span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+
+  
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+  </nav>
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+            
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="ChengjunJia"
+      src="/images/PersonalLogo.jpg">
+  <p class="site-author-name" itemprop="name">ChengjunJia</p>
+  <div class="site-description" itemprop="description">Some tiny things and knowledge about Computer Network Research</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">19</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/ChengjunJia" title="GitHub → https://github.com/ChengjunJia" rel="noopener" target="_blank"><i class="github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:chengjunjiathu@outlook.com" title="E-Mail → mailto:chengjunjiathu@outlook.com" rel="noopener" target="_blank"><i class="envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">ChengjunJia</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+      <span class="post-meta-item-text">Symbols count total: </span>
+    <span title="Symbols count total">26k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span class="post-meta-item-text">Reading time total &asymp;</span>
+    <span title="Reading time total">24 mins.</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a>
+  </div>
+
+<div id="days"></div>
+<script>
+function show_date_time(){
+    window.setTimeout("show_date_time()", 1000);
+    BirthDay=new Date("09/04/2019 16:36:14");//修改为自己的blog建站时间
+    today=new Date();
+    timeold=(today.getTime()-BirthDay.getTime());
+    sectimeold=timeold/1000
+    secondsold=Math.floor(sectimeold);
+    msPerDay=24*60*60*1000
+    e_daysold=timeold/msPerDay
+    daysold=Math.floor(e_daysold);
+    e_hrsold=(e_daysold-daysold)*24;
+    hrsold=setzero(Math.floor(e_hrsold));
+    e_minsold=(e_hrsold-hrsold)*60;
+    minsold=setzero(Math.floor((e_hrsold-hrsold)*60));
+    seconds=setzero(Math.floor((e_minsold-minsold)*60));
+    document.getElementById('days').innerHTML="本站已安全运行"+daysold+"天"+hrsold+"小时"+minsold+"分"+seconds+"秒";
+}
+function setzero(i){
+    if (i<10)
+    {i="0" + i};
+    return i;
+}
+show_date_time();
+</script>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="Total Visitors">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="Total Views">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script>
+<script src="/js/schemes/pisces.js"></script>
+<script src="/js/next-boot.js"></script>
+
+
+
+  
+
+
+
+
+  
+<script src="//cdn.jsdelivr.net/npm/algoliasearch@4/dist/algoliasearch-lite.umd.js"></script>
+<script src="//cdn.jsdelivr.net/npm/instantsearch.js@4/dist/instantsearch.production.min.js"></script><script src="/js/algolia-search.js"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+</body>
+</html>

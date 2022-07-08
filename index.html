@@ -1,0 +1,1356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 3.9.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"blog.chengjunjia.site","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="Some tiny things and knowledge about Computer Network Research">
+<meta name="keywords" content="Network, Computer Science, Software">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Blogs">
+<meta property="og:url" content="http://blog.chengjunjia.site/index.html">
+<meta property="og:site_name" content="Blogs">
+<meta property="og:description" content="Some tiny things and knowledge about Computer Network Research">
+<meta property="og:locale" content="en">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Blogs">
+<meta name="twitter:description" content="Some tiny things and knowledge about Computer Network Research">
+
+<link rel="canonical" href="http://blog.chengjunjia.site/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : true,
+    isPost : false,
+    lang   : 'en'
+  };
+</script>
+
+  <title>Blogs</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Blogs</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">To become outstanding</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="user fa-fw"></i>About</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="tags fa-fw"></i>Tags</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="archive fa-fw"></i>Archives</a>
+
+  </li>
+        <li class="menu-item menu-item-schedule">
+
+    <a href="/schedule/" rel="section"><i class="calendar fa-fw"></i>Schedule</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container"></div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="algolia-results">
+  <div id="algolia-stats"></div>
+  <div id="algolia-hits"></div>
+  <div id="algolia-pagination" class="algolia-pagination"></div>
+</div>
+
+      
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content index posts-expand">
+            
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://blog.chengjunjia.site/2021/10/28/021-learning/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/PersonalLogo.jpg">
+      <meta itemprop="name" content="ChengjunJia">
+      <meta itemprop="description" content="Some tiny things and knowledge about Computer Network Research">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Blogs">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/10/28/021-learning/" class="post-title-link" itemprop="url">待学习</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2021-10-28 00:00:00" itemprop="dateCreated datePublished" datetime="2021-10-28T00:00:00+00:00">2021-10-28</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2022-07-08 06:36:27" itemprop="dateModified" datetime="2022-07-08T06:36:27+00:00">2022-07-08</time>
+              </span>
+
+          <br>
+            <span class="post-meta-item" title="Symbols count in article">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">Symbols count in article: </span>
+              <span>305</span>
+            </span>
+            <span class="post-meta-item" title="Reading time">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">Reading time &asymp;</span>
+              <span>1 mins.</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="软件推荐"><a href="#软件推荐" class="headerlink" title="软件推荐"></a>软件推荐</h1><p>根据九净在SDNLAB上的<a href="https://www.fnedu.com/openclass/2681.html" target="_blank" rel="noopener">分享</a>, 一个合格的运维工程师需要掌握一定的开发能力。这些工具都不复杂，可以在使用中跟踪学习（本质上是应用层的东西，而应用层的变动常常很频繁，不需要特别学习）。</p>
+<h2 id="技能清单"><a href="#技能清单" class="headerlink" title="技能清单"></a>技能清单</h2><ul>
+<li>Django(把脚本变成服务)</li>
+<li>设备交互: netmiko\requests\ncclient\pysnmp</li>
+<li>模板解析: RE\jinja2\textfsm</li>
+<li>表格处理: pandas</li>
+<li>可视化: pyecharts</li>
+</ul>
+<h2 id="开源软件"><a href="#开源软件" class="headerlink" title="开源软件:"></a>开源软件:</h2><ul>
+<li>Docker: 快速部署</li>
+<li>Elk: 网络配置的存储</li>
+<li>DB: 借助orm</li>
+<li>NGINX: 部署web应用</li>
+</ul>
+<h1 id="技能推荐"><a href="#技能推荐" class="headerlink" title="技能推荐"></a>技能推荐</h1><p>可以参考<a href="https://blog.knownsec.com/Knownsec_RD_Checklist/index.html" target="_blank" rel="noopener">知道创宇技能清单</a>，整体上提供了一个框架性的说明；核心工作能力要随着自己的需求自行变动。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://blog.chengjunjia.site/2020/09/04/020-ModernCity/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/PersonalLogo.jpg">
+      <meta itemprop="name" content="ChengjunJia">
+      <meta itemprop="description" content="Some tiny things and knowledge about Computer Network Research">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Blogs">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/09/04/020-ModernCity/" class="post-title-link" itemprop="url">Modern Life</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2020-09-04 00:00:00" itemprop="dateCreated datePublished" datetime="2020-09-04T00:00:00+00:00">2020-09-04</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2022-07-08 06:36:27" itemprop="dateModified" datetime="2022-07-08T06:36:27+00:00">2022-07-08</time>
+              </span>
+
+          <br>
+            <span class="post-meta-item" title="Symbols count in article">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">Symbols count in article: </span>
+              <span>465</span>
+            </span>
+            <span class="post-meta-item" title="Reading time">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">Reading time &asymp;</span>
+              <span>1 mins.</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="ModernLife"><a href="#ModernLife" class="headerlink" title="ModernLife"></a>ModernLife</h1><p>现代城市生活指南: 汇总现代城市生活的技巧、涵盖现代文明的种种成就</p>
+<h2 id="衣食"><a href="#衣食" class="headerlink" title="衣食"></a>衣食</h2><p>城市中的衣食常常是放在一起的，构成“商业广场”、“商圈”。</p>
+<p>TODO: 插入商业广场图片，分析北京、苏州的商圈、小的农贸/服装批发市场等。</p>
+<h2 id="住行"><a href="#住行" class="headerlink" title="住行"></a>住行</h2><p>居住和出行常常是紧密相关的，大家聚集在城市的核心就在于方便出行，所以常常面对居住和出行之间的矛盾。<br>人有居住较大空间的欲望，也有方便出行的欲望；然而两个欲望在现实生活中常常会产生冲突。方便出行的地方人员聚集反而导致居住环境稍逊一筹。</p>
+<p>TODO: 插入小区的图片，介绍居委会、村委会制度</p>
+<h2 id="娱乐"><a href="#娱乐" class="headerlink" title="娱乐"></a>娱乐</h2><h3 id="景点"><a href="#景点" class="headerlink" title="景点"></a>景点</h3><p>景点主要分为自然景点和人文景点，自然风光就因地而异，人文景点则往往和历史传承相关。<br>这里的景点是指那种某些城市特有的景点，诸如公园、体育馆之类的共有娱乐场所则不考虑在内。<br>自然景点主要是：名山大川、特色风光；人文景点主要是：博物馆、名人故居、历史遗迹。这些地方往往可以进行打卡，而且</p>
+<h4 id="景点识别"><a href="#景点识别" class="headerlink" title="景点识别"></a>景点识别</h4><p>评价景点好坏、或者是挑选景点的一个重要核心在于，查看景点在国家旅游局的评级，所谓的4A</p>
+<h4 id="自然景点目录"><a href="#自然景点目录" class="headerlink" title="自然景点目录"></a>自然景点目录</h4><h4 id="人文景点目录"><a href="#人文景点目录" class="headerlink" title="人文景点目录"></a>人文景点目录</h4><h3 id="文娱"><a href="#文娱" class="headerlink" title="文娱"></a>文娱</h3><h3 id="体育"><a href="#体育" class="headerlink" title="体育"></a>体育</h3><h3 id="艺术"><a href="#艺术" class="headerlink" title="艺术"></a>艺术</h3><h2 id="产业"><a href="#产业" class="headerlink" title="产业"></a>产业</h2>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://blog.chengjunjia.site/2020/05/27/017-Enterprise/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/PersonalLogo.jpg">
+      <meta itemprop="name" content="ChengjunJia">
+      <meta itemprop="description" content="Some tiny things and knowledge about Computer Network Research">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Blogs">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/05/27/017-Enterprise/" class="post-title-link" itemprop="url">如何了解企业</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2020-05-27 09:10:18" itemprop="dateCreated datePublished" datetime="2020-05-27T09:10:18+00:00">2020-05-27</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2022-07-08 06:36:27" itemprop="dateModified" datetime="2022-07-08T06:36:27+00:00">2022-07-08</time>
+              </span>
+
+          <br>
+            <span class="post-meta-item" title="Symbols count in article">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">Symbols count in article: </span>
+              <span>499</span>
+            </span>
+            <span class="post-meta-item" title="Reading time">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">Reading time &asymp;</span>
+              <span>1 mins.</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>企业，是现代商业社会的基石；如何深入调查研究企业发展和相关信息，在现代社会是非常重要的基本技能。一般性的投资(尤其是投行和咨询公司)、商品品牌的选择(对于大件商品的购买决策、婴幼儿奶粉等非常重要的商品)，了解企业的历史、法律纠纷记录、财务情况等非常重要。但是，很多信息见诸搜索引擎或新闻报道的时候，已经是比较落后推迟了。获得一手信息就显得非常重要。</p>
+<p>最好的一手信息来自行业内的人，甚至就是企业的内部人员；当然这些信息往往都是颇费波折才能获取。</p>
+<p>还可以使用专业的搜索引擎，如”天眼查”、”企查查”、”见微数据”、”启信宝”等。这些引擎集合了<a href="http://www.gsxt.gov.cn/index.html" target="_blank" rel="noopener">国家企业信用信息公示系统</a>，<a href="http://wenshu.court.gov.cn/" target="_blank" rel="noopener">中国裁判文书网</a>，<a href="http://zxgk.court.gov.cn/index.jsp" target="_blank" rel="noopener">中国执行信息公开网</a>，<a href="http://www.cnipa.gov.cn/" target="_blank" rel="noopener">国家知识产权局</a>，<a href="http://sbj.cnipa.gov.cn/" target="_blank" rel="noopener">国家知识产权局商标局</a>，<a href="http://www.ncac.gov.cn/" target="_blank" rel="noopener">国家版权局</a>，各创投公司的公告说明，爱分析等资本管理/研究新闻平台，特别值得用来认识企业情况；尤其是在进行大额/重要交易(如租房、大件商品、重要食品之前，通过这些搜索引擎确认公司状况和风险，是非常有必要的)。当然，这种平台的缺点在于，需要付费(会员费也不便宜)，可以使用淘宝进行临时查询。</p>
+<h4 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h4><ol>
+<li><a href="https://www.zhihu.com/question/41015138" target="_blank" rel="noopener">知乎: 通过哪些渠道深入查询企业信息</a></li>
+<li><a href="https://www.zhihu.com/question/41015138/answer/626474702" target="_blank" rel="noopener">知乎: 深入查询企业信息</a></li>
+</ol>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://blog.chengjunjia.site/2020/05/24/016-modSecurity/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/PersonalLogo.jpg">
+      <meta itemprop="name" content="ChengjunJia">
+      <meta itemprop="description" content="Some tiny things and knowledge about Computer Network Research">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Blogs">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/05/24/016-modSecurity/" class="post-title-link" itemprop="url">ModSecurity</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2020-05-24 15:52:13" itemprop="dateCreated datePublished" datetime="2020-05-24T15:52:13+00:00">2020-05-24</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2022-07-08 06:36:27" itemprop="dateModified" datetime="2022-07-08T06:36:27+00:00">2022-07-08</time>
+              </span>
+
+          <br>
+            <span class="post-meta-item" title="Symbols count in article">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">Symbols count in article: </span>
+              <span>1.5k</span>
+            </span>
+            <span class="post-meta-item" title="Reading time">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">Reading time &asymp;</span>
+              <span>1 mins.</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>ModSecurity是典型的开源WAF组件, 需要配合Apache HTTP server和Nginx使用, docker镜像可以找到一些<a href="https://hub.docker.com/r/owasp/modsecurity-crs/" target="_blank" rel="noopener">link</a>下载, 然后运行</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">docker build -t owasp/modsecurity-crs .</span><br><span class="line">docker run -p 80:80 -ti -e PARANOIA=5 --rm owasp/modsecurity-crs</span><br></pre></td></tr></table></figure>
+
+<p>为了测试其性能, 可以安装<a href="https://httpd.apache.org/docs/2.4/programs/ab.html" target="_blank" rel="noopener">Apache HTTP server benchmarking tool</a>, 运行命令<em>ab -n 10000 -c 100 (url)</em> 即可。</p>
+<p>可以找到ModSecurity的各种配置(屏蔽ip黑名单等配置), 其中重要的是CRS的规则说明。/usr/local/nginx/conf/modsec/rules/*.conf 目录下的 CRS 防御规则文件及相关说明如下所示</p>
+<p>规则文件    规则说明<br>REQUEST-900-EXCLUSION-RULES-BEFORE-CRS    定制化个人防护规则，调整规则防护场景<br>REQUEST-901-INITIALIZATION    CRS 配置初始化<br>REQUEST-910-IP-REPUTATION    IP 信誉库<br>REQUEST-911-METHOD-ENFORCEMENT    HTTP 请求方法检测<br>REQUEST-912-DOS-PROTECTION    拒绝服务规则<br>REQUEST-913-SCANNER-DETECTION    扫描器检测<br>REQUEST-920-PROTOCOL-ENFORCEMENT    URL Scheme 协议检测<br>REQUEST-921-PROTOCOL-ATTACK    HTTP 协议攻击检测<br>REQUEST-930-APPLICATION-ATTACK-LFI    LFI 本地文件包含漏洞检测<br>REQUEST-931-APPLICATION-ATTACK-RFI    RFI 远程文件包含检测<br>REQUEST-932-APPLICATION-ATTACK-RCE    RCE 远程命令执行检测<br>REQUEST-933-APPLICATION-ATTACK-PHP    PHP 攻击检测<br>REQUEST-941-APPLICATION-ATTACK-XSS    XSS 攻击检测<br>REQUEST-942-APPLICATION-ATTACK-SQLI    SQL 注入攻击检测<br>REQUEST-943-APPLICATION-ATTACK-SESSION-FIXATION    会话固定攻击检测<br>REQUEST-949-BLOCKING-EVALUATION    基于风险值检测入站请求<br>RESPONSE-950-DATA-LEAKAGES    数据泄漏检测<br>RESPONSE-951-DATA-LEAKAGES-SQL    SQL 数据泄漏检测<br>RESPONSE-952-DATA-LEAKAGES-JAVA    JAVA 数据泄漏<br>RESPONSE-953-DATA-LEAKAGES-PHP    PHP 数据泄漏<br>RESPONSE-954-DATA-LEAKAGES-IIS    IIS 数据泄漏<br>RESPONSE-959-BLOCKING-EVALUATION    基于风险值检测出站请求<br>RESPONSE-980-CORRELATION    入站、出站风险值关联<br>RESPONSE-999-EXCLUSION-RULES-AFTER-CRS    定制化个人防护规则，重载、更新、移除检测规则</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://blog.chengjunjia.site/2020/04/20/014-NS3-Install/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/PersonalLogo.jpg">
+      <meta itemprop="name" content="ChengjunJia">
+      <meta itemprop="description" content="Some tiny things and knowledge about Computer Network Research">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Blogs">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/04/20/014-NS3-Install/" class="post-title-link" itemprop="url">NS3 安装与使用</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2020-04-20 16:44:35" itemprop="dateCreated datePublished" datetime="2020-04-20T16:44:35+00:00">2020-04-20</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2022-07-08 06:36:27" itemprop="dateModified" datetime="2022-07-08T06:36:27+00:00">2022-07-08</time>
+              </span>
+
+          <br>
+            <span class="post-meta-item" title="Symbols count in article">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">Symbols count in article: </span>
+              <span>349</span>
+            </span>
+            <span class="post-meta-item" title="Reading time">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">Reading time &asymp;</span>
+              <span>1 mins.</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>TODO: Unfinished works</p>
+<h4 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h4><p>在NS-3的官网上有详细说明如何安装，下面简单说明一下(理论来说用bake或者waf也可以安装，但个人感觉反而更麻烦一些)。</p>
+<ol>
+<li>安装依赖, 主要是gcc; 这里要求版本大于4.9, 而CentOS的默认版本是不够的。可以通过安装<em>devtoolset-8-toolchain<em>并通过shell命令启用</em>scl enable devtoolset-8 bash</em></li>
+<li>下载release版的ns源码: 使用<em>wget xxx/ns-allinone-3.30.tar.bz2 * 并通过</em>tar xjf*命令实现解压。</li>
+<li>在解压后的ns源码中执行<em>./build.py –enable-examples –enable-tests</em>。</li>
+</ol>
+<h4 id="架构说明"><a href="#架构说明" class="headerlink" title="架构说明"></a>架构说明</h4><h4 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h4><ol>
+<li><a href="https://www.nsnam.org/docs/tutorial/html/getting-started.html" target="_blank" rel="noopener">NS-3的官网安装说明</a></li>
+</ol>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://blog.chengjunjia.site/2020/04/10/013-SelfTraining/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/PersonalLogo.jpg">
+      <meta itemprop="name" content="ChengjunJia">
+      <meta itemprop="description" content="Some tiny things and knowledge about Computer Network Research">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Blogs">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/04/10/013-SelfTraining/" class="post-title-link" itemprop="url">科研训练</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2020-04-10 10:59:52" itemprop="dateCreated datePublished" datetime="2020-04-10T10:59:52+00:00">2020-04-10</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2022-07-08 06:36:27" itemprop="dateModified" datetime="2022-07-08T06:36:27+00:00">2022-07-08</time>
+              </span>
+
+          <br>
+            <span class="post-meta-item" title="Symbols count in article">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">Symbols count in article: </span>
+              <span>625</span>
+            </span>
+            <span class="post-meta-item" title="Reading time">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">Reading time &asymp;</span>
+              <span>1 mins.</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>读博士是非常珍贵的经历，虽然我目前只经历了1年半的时间，但各项科研技能都得到了一定的锻炼。</p>
+<h3 id="1-Research"><a href="#1-Research" class="headerlink" title="1. Research"></a>1. Research</h3><ul>
+<li><input checked disabled type="checkbox"> Find the key problem</li>
+<li><input checked disabled type="checkbox"> Read and summarize multiple materials</li>
+<li><input checked disabled type="checkbox"> Design the procedure to solve a problem</li>
+<li><input disabled type="checkbox"> Insist on one thing: 目前自己还不能做到这一点，换言之，只有当自己能够public长文之后才能说自己insist on one thing</li>
+</ul>
+<h3 id="2-Coding"><a href="#2-Coding" class="headerlink" title="2. Coding"></a>2. Coding</h3><p>编程能力还需要很大的提高，是自己未来2年的重点工作，可以通过LeetCode和各项CTF比赛来提高! 目前各项都处于基本入门水平。</p>
+<ul>
+<li><input disabled type="checkbox"> Coding Style</li>
+<li><input disabled type="checkbox"> Key Programming Language: C/C++, Python</li>
+<li><input disabled type="checkbox"> Web Knowledge, PHP, MySQL</li>
+<li><input disabled type="checkbox"> CTF Knowledge</li>
+</ul>
+<h3 id="3-Communication"><a href="#3-Communication" class="headerlink" title="3. Communication"></a>3. Communication</h3><p>交流能力经过辅导员岗位的锻炼，得到了很好的提升。未来应该通过实习等方式继续提升。</p>
+<ul>
+<li><input checked disabled type="checkbox"> Write common materials</li>
+<li><input disabled type="checkbox"> Write academic papers</li>
+<li><input checked disabled type="checkbox"> Make a good speech</li>
+<li><input checked disabled type="checkbox"> Design a good PPT</li>
+</ul>
+<h3 id="4-Other-Qualities"><a href="#4-Other-Qualities" class="headerlink" title="4. Other Qualities"></a>4. Other Qualities</h3><ul>
+<li><input checked disabled type="checkbox"> Confidence</li>
+<li><input checked disabled type="checkbox"> Optimism</li>
+<li><input disabled type="checkbox"> Adherence</li>
+</ul>
+<h3 id="Changelog"><a href="#Changelog" class="headerlink" title="Changelog"></a>Changelog</h3><ol>
+<li>2020/04/10, 根据自己博二上学期的情况作出总结</li>
+</ol>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://blog.chengjunjia.site/2020/04/09/012-NSM_Install/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/PersonalLogo.jpg">
+      <meta itemprop="name" content="ChengjunJia">
+      <meta itemprop="description" content="Some tiny things and knowledge about Computer Network Research">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Blogs">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/04/09/012-NSM_Install/" class="post-title-link" itemprop="url">NSM 介绍</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2020-04-09 12:44:35" itemprop="dateCreated datePublished" datetime="2020-04-09T12:44:35+00:00">2020-04-09</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2022-07-08 06:36:27" itemprop="dateModified" datetime="2022-07-08T06:36:27+00:00">2022-07-08</time>
+              </span>
+
+          <br>
+            <span class="post-meta-item" title="Symbols count in article">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">Symbols count in article: </span>
+              <span>1.9k</span>
+            </span>
+            <span class="post-meta-item" title="Reading time">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">Reading time &asymp;</span>
+              <span>2 mins.</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>TODO: NSM项目尚未能够完全成功运行! 需要通过Snort、ModSecurity等Docker做完善工作。</p>
+<p>本文旨在介绍CNCF基金会下的Network Service Mesh的相关情况和使用方法总结。</p>
+<h4 id="Docker、Kubernetes、CNCF"><a href="#Docker、Kubernetes、CNCF" class="headerlink" title="Docker、Kubernetes、CNCF"></a>Docker、Kubernetes、CNCF</h4><p>Docker，作为轻量级虚拟化–容器的一种解决方案，在开源社区从诞生之初就备受瞩目。Docker能轻到近似二进制文件大小(可以参考<a href="https://www.infoq.cn/article/3-simple-tricks-for-smaller-docker-images" target="_blank" rel="noopener">裁减镜像</a>)，占用极少的资源、同时保证isolation。但是在业务中部署容器却不是一件简单的事情，需要配置物理机和容器之间的交互，同时需要配置好各种监控以保证适时扩容。为了应对容器的这种问题，Kubernetes作为容器的编排工具出现了。Kubernetes是Google将其内部集群管理系统Borg(13年发布Omega)修改后于14年开源。2015年，谷歌和Linux基金会合作建立云原生计算基金会(CNCF)，旨在建立可持续的生态系统。Google此举可认为是通过开源打击其他云厂商，既然我商业化进展不顺、通过开源项目来引发混战也是不错的。Kubernetes在Security方面天然有Certificate和PKI、在Scheduling和Scalability天然考虑分布式(谷歌的分布式系统实力还是非常强大的)，加上虚拟化的一次开发到处部署，Restful API的现代化前端交互，Kubernetes集合了system设计的各种历史经验，对于云应用来说具有强大的吸引力。</p>
+<p>随后，Kubernetes有了软件包管理系统Helm(类似Brew、apt或yum)、Minikube(本地可运行Kubernetes)、Prometheus(metric收集数据库)、OpenTracing(Debug工具)等等从2016年开始逐渐完善起来；到了2017年，Istio(微服务网络)发布，Kubernetes也在亚马逊、微软等开始推出商用，转眼到了2020年，Kubernetes可以说已经是System方向必须掌握的工具了。</p>
+<p>目前围绕Kubernetes已有一系列的开源项目，相关信息都可以在CNCF的官网上找到。阿里、华为都有贡献开源项目。</p>
+<h4 id="NSM介绍"><a href="#NSM介绍" class="headerlink" title="NSM介绍"></a>NSM介绍</h4><p>k8s在网络方面有一个缺陷，就是不能配置L2/L3层的处理；对于应用来说，看到TCP层已经足够了(分布式系统直接就基于RPC设计系统)，不需要L2/L3层的东西；k8s的访问安全性是通过Authentication实现的，因此不需要在意流量如何如何。但是如果想把k8s放到公网上，就不得不考虑更多的L2/L3层的网络功能，比如Middlebox(Firewall-&gt;DPI-&gt;VPN形成的基于安全的考虑设立的SFC)，比如电信网的计费网关、QoS功能模块等。<strong>但是从纯Zero-Trust的角度，MB似乎是要尽量舍弃的？</strong></p>
+<p>Network Service Mesh项目的设立之初就是为了应对这个问题，详细的说明介绍可以参考<a href="https://www.servicemesher.com/blog/202002-network-service-mesh/" target="_blank" rel="noopener">这个链接</a>。有些重点内容挑出来如下</p>
+<blockquote>
+<p>NSM并没有对Kubernetes的CNI模型进行扩展或者修改，而是采用了一套与CNI完全独立的新机制来以实现这些高级的网络需求。<br>NSM参考了Kubernetes中Service的概念提出了Network Service。Network Service对外提供的是L2/L3层的网络服务，即对数据包进行处理和转发，而不会终结数据包。<br>我们可以将NSM和SDN结合使用，可以通过NSM中的Network Service接入SDN提供的强大的网络服务。下图是在NSM中利用SDN为应用提供QoE（Quality of Experience）服务的一个例子。</p>
+</blockquote>
+<h4 id="NSM使用"><a href="#NSM使用" class="headerlink" title="NSM使用"></a>NSM使用</h4><h5 id="NSM的直接安装"><a href="#NSM的直接安装" class="headerlink" title="NSM的直接安装"></a>NSM的直接安装</h5><ol>
+<li>安装k8s以及k8s的包管理器helm</li>
+<li>通过helm增加repo和安装</li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">helm repo add nsm https://helm.nsm.dev/</span><br><span class="line">helm install nsm/nsm</span><br></pre></td></tr></table></figure>
+
+<h5 id="NSM的模拟使用"><a href="#NSM的模拟使用" class="headerlink" title="NSM的模拟使用"></a>NSM的模拟使用</h5><ol>
+<li>下载NSM代码和NSM example(在github中)到同一目录下</li>
+<li>安装example给出的<a href="https://github.com/networkservicemesh/examples" target="_blank" rel="noopener">说明</a>, 进行makefile的处理[^footnote-kind]。</li>
+<li>安装</li>
+</ol>
+<p>NSM在Github下载后</p>
+<h4 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h4><ol>
+<li><a href="https://www.infoq.cn/article/3-simple-tricks-for-smaller-docker-images" target="_blank" rel="noopener">裁减Docker镜像大小</a></li>
+<li><a href="https://www.servicemesher.com/blog/202002-network-service-mesh/" target="_blank" rel="noopener">NFV走向云原生时代：Network Service Mesh项目介绍</a></li>
+<li><a href="https://cloud.tencent.com/developer/article/1548138" target="_blank" rel="noopener">CNCF网络研讨会：NSM网络服务网格 - 介绍（视频+PDF）</a></li>
+<li><a href="https://cizixs.com/2017/12/30/cncf-cloud-native-landscape/" target="_blank" rel="noopener">CNCF 云原生容器生态系统概要</a></li>
+</ol>
+<p>[^footnote-kind]: 主要是安装k8s本地模拟器: kind； 关于kind的简单说明可以查看<a href="https://zhuanlan.zhihu.com/p/61492135" target="_blank" rel="noopener">ref</a>。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://blog.chengjunjia.site/2020/03/31/010-ResearchMethods/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/PersonalLogo.jpg">
+      <meta itemprop="name" content="ChengjunJia">
+      <meta itemprop="description" content="Some tiny things and knowledge about Computer Network Research">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Blogs">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/03/31/010-ResearchMethods/" class="post-title-link" itemprop="url">科研方法论, 以网包分类为例</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2020-03-31 12:44:35" itemprop="dateCreated datePublished" datetime="2020-03-31T12:44:35+00:00">2020-03-31</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2022-07-08 06:36:27" itemprop="dateModified" datetime="2022-07-08T06:36:27+00:00">2022-07-08</time>
+              </span>
+
+          <br>
+            <span class="post-meta-item" title="Symbols count in article">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">Symbols count in article: </span>
+              <span>3.7k</span>
+            </span>
+            <span class="post-meta-item" title="Reading time">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">Reading time &asymp;</span>
+              <span>3 mins.</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>在整理自己以前杂七杂八的东西时, 发现自己之前写过Research method的一些内容, 杂乱在md文件、OneNote、Pocket和Youdao Note中, 这里做一个简单整理(自己的个人知识管理能力确实有待提高, 需要维护changelog和所有文件归档到一起)。</p>
+<p>做科研就是在解决问题，是学习用逻辑和科学方法论去解决问题。当然，逻辑或者说理性是不能解决所有问题，宗教信仰自有其存在的必要(这一点也是《战争论》中提到的: 交战绝不仅是双方力量的对比、意志在其中会发挥作用)。但这一套方法不得不说能够解决绝大多数的问题，是优秀世界观的一个重要组成部分。所谓的科学的方法，抽象来说就是大家说的唯物辩证法，我觉得更加实用的是”7W”准则: What, When, Who, Why, Where, How, For Whom。当我们用着7W准则去思考一个问题时, 就会出现如下结果。</p>
+<h3 id="对问题的思考"><a href="#对问题的思考" class="headerlink" title="对问题的思考"></a>对问题的思考</h3><ol>
+<li>What: <strong>从辩证角度来看，问题是什么。具体来说, 问题的内涵和外延分别是什么</strong>。如, 网包分类问题。一般性的定义/内涵可以描述为, “给定一组规则和一个报文, 对该报文找到适配的最高优先级的规则”, 这里的一些关键形容词发生变化后就会对应不同的问题。如: “一个规则”启发我们设计BCAM硬件类型， “一组报文”启发我们去设计新的batch算法， “所有匹配规则”启发我们做遍历算法或对规则进行交集操作， “某一个匹配规则”启发我们对规则做并集操作。修改定义得到不同的问题，其实也能启发我们更加深入地思考问题。比如: 基于“所有匹配规则”设计出的算法肯定存在优化空间的，因为我们只需要最高优先级的匹配规则，所以Bit Vector类型的算法可以优化；比如: 基于“某一个匹配规则”设计出的算法其实可以作为“最高优先级的规则”问题的一个“预过滤”。当然，这些启发式信息最后能不能得到好的结果，就要因地制宜和进行相应的实验验证了。问题的外延就需要我们举例来理解问题，典型的“5元组”规则(src/dst*ip/port+protocol)的定义是什么样子的，是prefix和range，那它们是不是存在什么特殊性质？我们是不是可以用一些特殊方法？现在的规则还存在OpenFlow类型的11元组的规则，甚至是自定义包头的规则。挖掘问题的外延，我们就会把问题做的不断精细化。</li>
+<li>When: <strong>从时间维度来看，问题处在什么位置</strong>。我特别喜欢Gartner的Hyper技术曲线，也就是技术发展存在“起步”-“泡沫”-“幻灭”-“理性发展”，也就是事情存在高估期、低估期然后进入理性期(插一句，本朝对于太祖的看法也是如此，哈哈)。这一点在Research中尤其重要，因为你要创新就要尽量去做<strong>很少人考虑过/做成</strong>的事情。当一个所谓的“<strong>新领域</strong>”出现的时候，我们就能发现很多“很少人考虑过”的事情，比如：把ML泛滥到其他领域(笑)。至于“很少人做成”的事情，就要考虑两种情况：一是大概率做不成，比如“永动机”、NP问题等；一是比较困难，比如“更新与分类都性能良好的网包分类算法”。想要知道问题处在什么时间维度，就要知道该事物的过去、同时找到历史上的参照物以预测未来。以网包分类算法为例，做一下survey就知道，该问题在2000年左右的时候比较Hot，提出了各种各样的solution；在2005年已经出现了非常好的综述。当然，一项技术总是可以持续发展的（比如，发动机持续研究了好几个世纪），网包分类问题也可以持续研究下去，但该问题已经不属于“新领域”，不是那种很好挖的矿了（当问题的内涵、外延都比较清晰的时候，该问题也就常常到了平稳发展的时候了）。</li>
+<li>Where: <strong>从空间维度来看，问题处在什么位置</strong>。我们需要知道问题是在哪个位置、哪个领域，周围可利用的资源是什么。网包分类问题虽然可以泛化来思考，但一般就是用在网络中间设备上: 路由器、防火墙等；所以我们需要去了解路由器的架构、性能指标(特别是网络带宽的迅速增长)、供应链(整个产品从最上游到最下游是哪些公司一起造出来的)。很自然地我们就发现存在NPU(多核网络处理器)、TCAM、ASIC、MIPS指令集这种专业化硬件，自然就想基于这些硬件设计算法；扩展来想，我们就会思考FPGA、GPU能不能用上（能够发文章，但工业应用大概率不是很有用）。继续延伸发现Open vSwitch上面需要网包分类，自然就考虑到CPU平台（网络功能虚拟化领域等）上算法优化是很重要的。</li>
+<li>Why: <strong>从逻辑角度来看，问题处在什么位置；也就是为什么有这个问题</strong>。这一部分的问题就可能需要我们深入到数理基础部分了，比如：网包分类问题，从数理层面上和计算几何(1978年Shamos的博士论文而兴起的科学)中的点定位、数据库的查询等都有关系，然后需要返回到拓扑理论、算法设计上。更典型的问题，比如：网包调度问题，本质上和流量调度、工业工程里的调度都有相似之处，需要返回到诸如，网络微积分的数学基础上。当然，浅显地来看，trade-off在计算机领域到处存在，在网包分类问题中，内存空间占用和网包分类所需要的时间存在Trade-off、快速规则更新和快速网包分类之间也存在Trade-off。</li>
+<li>How: <strong>调研清楚问题已有的各种解决方案</strong>。这方面需要大量的专业知识和广泛的了解，读survey、读专业性期刊、参加讲座、读教材、工业实践，当然最最靠谱的方法是找到<strong>可靠的专业人士</strong>做咨询或委托。直接搜索Packet Classification，然后就能看到很多papers，根据citation数量就能分辨出那些文章好。根据经典的survey来说，网包分类问题的常见解决思路有四种：线性查找、决策树、哈希(TSS)和比特串(BitVector)，其实从本质上来讲，后三种(树、哈希、比特串)基本就是高性能中常用的数据结构了(因为涉及到非线性，队列类型的数据结构并不适合)。</li>
+<li>Who: <strong>向谁去了解</strong>。这里推荐使用“微软学术”和“Aminer”、能够借助知识图谱自动帮助分析，免去手动查找的苦恼；初入领域的人也可以使用<strong>HistCite工具</strong>来分析。比如，我就发现了Washington University的PhD, David E. Taylor, 他博士期间研究高性能Router和Switch(刚好是那个时期的Hot研究)；当然还有我导(毕竟我导带着实验室在PC领域呆了10年)。不过有趣的是Taylor博士毕业后短暂在学术界呆了9个月(做Visiting Assistant Professor)，就投身了工业界了(笑)，在Exegy公司做到现在(15年多，现任CTO，可以在Linked上看到他的简历)。Exegy这家公司也挺有趣，用FPGA加速为金融领域的人提供real-time data；果然是金融和信息不分家。</li>
+<li>For Whom: <strong>为了什么</strong>。这一点并不在传统的6W框架内，但做research很容易犯的一个错误是：漫无目的。纯粹从学术追求出发、为了满足自己的好奇心，四处查看无可厚非、只要记得多总结积累就好。但是如果是“为了他人”做项目或者“为了自己”发文章，都要适当功利一点，去思考、去聚焦在要做什么上面。</li>
+</ol>
+<h3 id="对领域的思考"><a href="#对领域的思考" class="headerlink" title="对领域的思考"></a>对领域的思考</h3><ol>
+<li>What: 什么是热点？什么是学术领域内的关键问题？什么是工业领域的关键问题？未来2年、5年乃至10年什么东西会发展起来？(当然，未来10年谁也看不清，但这不妨碍去思考这个问题)</li>
+<li>When: 领域的发展历史是什么。比如: 计算机网络在从underlay走向overlay，云原生场景是网络的重要场景；而underlay的物理网络的管理从单机配置往SDN、IBN发展(华为、思科公司)，应用从有线往无线延伸，从Internet向着IoT前进。</li>
+<li>Who: 领域的大牛是谁。怼着中美的科学院、工程院的院士名单和研究领域的介绍去匹配就行。计算机网络领域就怼着Sigcomm Award的获得者去看就行: George Varghese(这位大佬是真的NB, 他在Sigcom’14获奖时的Slides对于做Research非常有价值), Nick McKeown, Sally Floyd, Scott Shenker, Van Jacobson, Raj Jain(大佬的主页对于Network新人非常友好)。哈，从这个角度来看，多路径传输(Multi-path TCP)很有前途啊，毕竟提出者Mark Handley 刚拿了奖(笑)。</li>
+<li>Why: 领域内的principals有什么？一些经典设计的原理是什么？</li>
+<li>Where: 略。</li>
+<li>How: 学习一些常用的技能。如: CS领域内的编程、一些工具、写作、英语等。</li>
+</ol>
+<h3 id="补充"><a href="#补充" class="headerlink" title="补充"></a>补充</h3><p>还有一个特别好用的是六顶思考帽。</p>
+<ol>
+<li>陈述问题事实（白帽）</li>
+<li>提出如何解决问题的建议, 头脑风暴（绿帽）</li>
+<li>评估建议的优缺点：列举优点（黄帽）；列举缺点（黑帽）</li>
+<li>对各项选择方案进行直觉判断（红帽）</li>
+<li>总结陈述，得出方案（蓝帽）</li>
+</ol>
+<h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><ol>
+<li><a href="https://wiki.mbalib.com/zh-tw/6W1H%E5%8E%9F%E5%88%99" target="_blank" rel="noopener">6W1H原则</a></li>
+<li>六顶思考帽(中科大·文献管理与信息分析·罗昭锋)</li>
+</ol>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://blog.chengjunjia.site/2020/02/24/011-PacketScheduler/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/PersonalLogo.jpg">
+      <meta itemprop="name" content="ChengjunJia">
+      <meta itemprop="description" content="Some tiny things and knowledge about Computer Network Research">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Blogs">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/02/24/011-PacketScheduler/" class="post-title-link" itemprop="url">网包调度</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2020-02-24 16:23:35" itemprop="dateCreated datePublished" datetime="2020-02-24T16:23:35+00:00">2020-02-24</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2022-07-08 06:36:27" itemprop="dateModified" datetime="2022-07-08T06:36:27+00:00">2022-07-08</time>
+              </span>
+
+          <br>
+            <span class="post-meta-item" title="Symbols count in article">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">Symbols count in article: </span>
+              <span>64</span>
+            </span>
+            <span class="post-meta-item" title="Reading time">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">Reading time &asymp;</span>
+              <span>1 mins.</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h3 id="可能的想法"><a href="#可能的想法" class="headerlink" title="可能的想法"></a>可能的想法</h3><h3 id="网包调度问题"><a href="#网包调度问题" class="headerlink" title="网包调度问题"></a>网包调度问题</h3><h3 id="经典算法"><a href="#经典算法" class="headerlink" title="经典算法"></a>经典算法</h3><ol>
+<li>Fair Queuing</li>
+<li>Round Robin</li>
+<li>WRR</li>
+</ol>
+<h3 id="GPS模型"><a href="#GPS模型" class="headerlink" title="GPS模型"></a>GPS模型</h3><h3 id="从Universl到PIFO"><a href="#从Universl到PIFO" class="headerlink" title="从Universl到PIFO"></a>从Universl到PIFO</h3><h3 id="继续改进"><a href="#继续改进" class="headerlink" title="继续改进"></a>继续改进</h3>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://blog.chengjunjia.site/2019/12/09/008-ResearchPain/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/PersonalLogo.jpg">
+      <meta itemprop="name" content="ChengjunJia">
+      <meta itemprop="description" content="Some tiny things and knowledge about Computer Network Research">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Blogs">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/12/09/008-ResearchPain/" class="post-title-link" itemprop="url">Research Pain</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2019-12-09 10:27:35" itemprop="dateCreated datePublished" datetime="2019-12-09T10:27:35+00:00">2019-12-09</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2022-07-08 06:36:27" itemprop="dateModified" datetime="2022-07-08T06:36:27+00:00">2022-07-08</time>
+              </span>
+
+          <br>
+            <span class="post-meta-item" title="Symbols count in article">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">Symbols count in article: </span>
+              <span>860</span>
+            </span>
+            <span class="post-meta-item" title="Reading time">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">Reading time &asymp;</span>
+              <span>1 mins.</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>题目是科研痛苦，嗯，现在我感受到了科研的痛苦了。自己对于文章的态度也发生了不小转变，我个人经历的对于research的态度为:</p>
+<ol>
+<li>这篇文章好出色，我怎么不知道这些事情；那篇文章也好出色。</li>
+<li>我看看这篇CCF B的文章提了啥新东西，切，创新真少；还是SIGCOMM上的文章能看。</li>
+<li>看起来有些SIGCOMM的文章也不是很好啊。</li>
+<li>自己动手做，CCF-C级别文章我也做不出来；我要完了。</li>
+</ol>
+<p>大四刚入研究生涯的时候，感觉自己是要做出来顶级科研，那些没有巨大创新、或者没有产生极大的学术或工业界影响力的工作都是不值得做的。一个人闷头搞1-2年，还写不出来top级的项目？</p>
+<p>怀揣这种想法，我进入博士1年级，那时候自己主要在上课，上学期读paper、下学期写代码；两方面的进步还是有一些的；现在可以说自己不再是科研小白了，科研是怎么回事大致有了解。可惜的是没有抓紧时间继续进入自己的毕设工作(虽然中间参与Packet Classification项目有2个月，但自己时间还是足够的)，自己是有机会完成Packet Scheduling深入的东西的。</p>
+<p>到了博士2年级，自己立志上学期要完成Packet Scheduling的project，但是半路又拐去了Edge Computing。开始想的是1个月搞定，后来发现自己并不能顺利结束；中间又发生了题目的切换：原定的使用EC来更好地提供Network Security(如：DDoS Defense)的思路发现已经有了相关文章做过了；于是改做如何在EC场景下提供Network Security。磕磕绊绊做了2个月，匆匆忙忙想了一点东西就出手做，产出肯定是不怎样的，后续是要和付哲师兄继续合作、加强每周交流，深入把这个project好好地结束掉。</p>
+<p>还是要记住“竞争”时要避免的4件事情，拼多多、抖音的发展都有点这种味道。</p>
+<ul>
+<li>看不见：感觉自己没有什么对标的对手。</li>
+<li>看不起：新产品出现时，没有看到其背后的前途。</li>
+<li>看不懂：产品逐渐壮大，想不明白为什么发展起来。</li>
+<li>跟不上：别人的商业模式已经起来后，没有及时跟进，错失最后的机会。</li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+
+  
+  <nav class="pagination">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
+  </nav>
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+            
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="ChengjunJia"
+      src="/images/PersonalLogo.jpg">
+  <p class="site-author-name" itemprop="name">ChengjunJia</p>
+  <div class="site-description" itemprop="description">Some tiny things and knowledge about Computer Network Research</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">19</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/ChengjunJia" title="GitHub → https://github.com/ChengjunJia" rel="noopener" target="_blank"><i class="github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:chengjunjiathu@outlook.com" title="E-Mail → mailto:chengjunjiathu@outlook.com" rel="noopener" target="_blank"><i class="envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">ChengjunJia</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+      <span class="post-meta-item-text">Symbols count total: </span>
+    <span title="Symbols count total">26k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span class="post-meta-item-text">Reading time total &asymp;</span>
+    <span title="Reading time total">24 mins.</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a>
+  </div>
+
+<div id="days"></div>
+<script>
+function show_date_time(){
+    window.setTimeout("show_date_time()", 1000);
+    BirthDay=new Date("09/04/2019 16:36:14");//修改为自己的blog建站时间
+    today=new Date();
+    timeold=(today.getTime()-BirthDay.getTime());
+    sectimeold=timeold/1000
+    secondsold=Math.floor(sectimeold);
+    msPerDay=24*60*60*1000
+    e_daysold=timeold/msPerDay
+    daysold=Math.floor(e_daysold);
+    e_hrsold=(e_daysold-daysold)*24;
+    hrsold=setzero(Math.floor(e_hrsold));
+    e_minsold=(e_hrsold-hrsold)*60;
+    minsold=setzero(Math.floor((e_hrsold-hrsold)*60));
+    seconds=setzero(Math.floor((e_minsold-minsold)*60));
+    document.getElementById('days').innerHTML="本站已安全运行"+daysold+"天"+hrsold+"小时"+minsold+"分"+seconds+"秒";
+}
+function setzero(i){
+    if (i<10)
+    {i="0" + i};
+    return i;
+}
+show_date_time();
+</script>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="Total Visitors">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="Total Views">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script>
+<script src="/js/schemes/pisces.js"></script>
+<script src="/js/next-boot.js"></script>
+
+
+
+  
+
+
+
+
+  
+<script src="//cdn.jsdelivr.net/npm/algoliasearch@4/dist/algoliasearch-lite.umd.js"></script>
+<script src="//cdn.jsdelivr.net/npm/instantsearch.js@4/dist/instantsearch.production.min.js"></script><script src="/js/algolia-search.js"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+</body>
+</html>
